@@ -785,7 +785,7 @@ plugins:
 
   # Typing Effects
   comment_typing:
-    enable: #true
+    enable: true
     js: volantis-static/libs/comment_typing/comment_typing.js # https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/comment_typing.js
 
   # 视差滚动效果 Slide Background
