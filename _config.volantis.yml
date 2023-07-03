@@ -131,7 +131,7 @@ cover:
   # background: https://bing.ioliu.cn/v1/rand?w=1920&h=1200
   # logo: /img/logo.png
   title: 'Gavinccc'
-  subtitle: #  <div id="binft"></div>
+  subtitle: <div id="binft"></div>
   search:  gavinccc   # search bar placeholder
   features:
     - name: 文档
