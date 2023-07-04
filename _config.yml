@@ -109,6 +109,9 @@ import:
     - <meta name="msapplication-TileColor" content="#ffffff">
     - <meta name="msapplication-config" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/browserconfig.xml">
     - <meta name="theme-color" content="#ffffff">
+    - <meta name="keywords" content="Gavinccc, gavinccc, gavinsocu, gavin, cuso4, 博客">
+    - <title>Gavinccc</title>
+    - <meta name="author" content="gavinccc">
     - <link rel="apple-touch-icon" sizes="180x180" href="/img/logo.png">
     - <link rel="icon" type="image/png" sizes="32x32" href="/img/logo.png">
     - <link rel="icon" type="image/png" sizes="16x16" href="/img/logo.png">
