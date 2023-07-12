@@ -66,7 +66,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-07-08T01:52:35.000Z">
-<meta property="article:modified_time" content="2023-07-10T05:46:53.854Z">
+<meta property="article:modified_time" content="2023-07-11T12:09:48.356Z">
 <meta property="article:author" content="gavinccc">
 <meta property="article:tag" content="从51到32">
 <meta name="twitter:card" content="summary">
@@ -1897,7 +1897,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1688968029165),
+    lastupdate: new Date(1689171612539),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate","webinfo"],
       for_post: ["toc"],
@@ -1917,7 +1917,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       fancybox: {"css":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/@fancyapps/ui/dist/fancybox.css","js":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/@fancyapps/ui/dist/fancybox.umd.js"},
       
       aplayer: {
-        id: 6615680094,
+        id: 4896469542,
         enable:true
       },
       
@@ -2558,7 +2558,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       list-max-height='320px'
       server='netease'
       type='playlist'
-      id='6615680094'
+      id='4896469542'
       list-folded='true'>
     </meting-js>
   
@@ -3014,8 +3014,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="class"><span class="keyword">enum</span> <span class="title">color</span> &#123;</span> red=<span class="number">1</span>, green, blue &#125;;</span><br><span class="line"> </span><br><span class="line">    <span class="class"><span class="keyword">enum</span>  <span class="title">color</span> <span class="title">favorite_color</span>;</span></span><br><span class="line"> </span><br><span class="line">    <span class="comment">/* 用户输入数字来选择颜色 */</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;请输入你喜欢的颜色: (1. red, 2. green, 3. blue): &quot;</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%u&quot;</span>, &amp;favorite_color);</span><br><span class="line"> </span><br><span class="line">    <span class="comment">/* 输出结果 */</span></span><br><span class="line">    <span class="keyword">switch</span> (favorite_color)</span><br><span class="line">    &#123;</span><br><span class="line">    <span class="keyword">case</span> red:</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;你喜欢的颜色是红色&quot;</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> green:</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;你喜欢的颜色是绿色&quot;</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> blue:</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;你喜欢的颜色是蓝色&quot;</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;你没有选择你喜欢的颜色&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>补充</strong></p>
 <blockquote>
-<p>在所有教科书与c规范中，switch都是不允许case后接范围的，但是在最新的GNU C进行了扩展<br>可以使用case min … max这种用法表示范围（英文句号，前后有空格）<br>示例</p>
+<p>在所有教科书与c规范中，switch都是不允许case后接范围的，但是在最新的GNU C进行了扩展<br>可以使用case min … max这种用法表示范围（英文句号，前后有空格）</p>
 </blockquote>
+<p>示例</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="built_in">scanf</span>( <span class="string">&quot;%d&quot;</span>,&amp;i);</span><br><span class="line">    <span class="keyword">switch</span> (i)</span><br><span class="line">    &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span> ... <span class="number">3</span>:</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;niubi\n&quot;</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h3><p>C语言中几乎最重要的地方来了，难度较大，必须掌握</p>
@@ -3024,8 +3025,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p><img src="/img/c-pointer.png" class="lazyload" data-srcset="/img/c-pointer.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image"></p>
 <p>&amp;取址*取值<br><img src="/img/20230710103743.png" class="lazyload" data-srcset="/img/20230710103743.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image"></p>
-<p><strong>数组即指针！！</strong><br><img src="/img/20230710105357.png" class="lazyload" data-srcset="/img/20230710105357.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image"></p>
+<p><strong>数组名即指针！！</strong><br><img src="/img/20230710105357.png" class="lazyload" data-srcset="/img/20230710105357.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image"></p>
 <p>指针控制数组<br><img src="/img/20230710110332.png" class="lazyload" data-srcset="/img/20230710110332.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image"></p>
+<h3 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h3><p>与枚举有点相似<br>为了使有关联性的变量变得更加易控，也为了提高可读性，结构体因此而生</p>
+<p>结构体定义</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span>  <span class="title">Stuructstudent</span>&#123;</span></span><br><span class="line">    <span class="type">int</span> num;</span><br><span class="line">    <span class="type">char</span> name;</span><br><span class="line">    <span class="type">char</span> sex;</span><br><span class="line">    <span class="type">int</span> age</span><br><span class="line">&#125;;<span class="comment">//声明结构体</span></span><br><span class="line">Structstudent student1;<span class="comment">//定义变量</span></span><br></pre></td></tr></table></figure>
 
   </div>
   
@@ -3050,10 +3054,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-07-10T13:46:53+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-07-11T20:09:48+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年7月10日</p>
+    <p>更新于：2023年7月11日</p>
   </a>
 </div>
 
@@ -3133,6 +3137,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
+        <a class='prev' href='/2023/07/11/3D%E5%BB%BA%E6%A8%A1/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>3D建模</p>
+          <p class='content'>4896469542
+</p>
+        </a>
+      
       
         <a class='next' href='/2023/07/07/%E5%89%8D%E7%AB%AF/'>
           <p class='title'>前端+<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
@@ -3198,7 +3208,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E5%AD%97%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text">关键字与数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E3%80%81%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E3%80%81%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F"><span class="toc-number">2.</span> <span class="toc-text">局部变量、全局变量、静态变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84"><span class="toc-number">3.</span> <span class="toc-text">数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%9A%E4%B8%BE"><span class="toc-number">4.</span> <span class="toc-text">枚举</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%87%E9%92%88"><span class="toc-number">5.</span> <span class="toc-text">指针</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E5%AD%97%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text">关键字与数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E3%80%81%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E3%80%81%E9%9D%99%E6%80%81%E5%8F%98%E9%87%8F"><span class="toc-number">2.</span> <span class="toc-text">局部变量、全局变量、静态变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84"><span class="toc-number">3.</span> <span class="toc-text">数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%9A%E4%B8%BE"><span class="toc-number">4.</span> <span class="toc-text">枚举</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%87%E9%92%88"><span class="toc-number">5.</span> <span class="toc-text">指针</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%84%E4%BD%93"><span class="toc-number">6.</span> <span class="toc-text">结构体</span></a></li></ol>
     </div>
   </section>
 
@@ -3297,7 +3307,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       list-max-height='320px'
       server='netease'
       type='playlist'
-      id='6615680094'
+      id='4896469542'
       list-folded='true'>
     </meting-js>
   
@@ -3661,7 +3671,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
             Metings.forEach((item, index) => {
               const aplayerItem = item.aplayer; if(!aplayerItem) return;
               const rightAplayerCheck = 'true' === 'true'
-                && item.meta.id === '6615680094';
+                && item.meta.id === '4896469542';
               if(rightAplayerCheck && typeof RightMenuAplayer !="undefined") RightMenuAplayer.checkAPlayer();
               if(aplayerItem.events.events.play.every(item => {return item.name !== 'messagePlay'})) {
                 aplayerItem.on('play', function messagePlay() {
@@ -3872,7 +3882,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 
 
   <script>
-  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp"];
+  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -4101,7 +4111,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"gavinsocu","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"gavinccc","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"gavin的博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"gavinsocu"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/07/08/从51到32/","name":"从51到32"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"gavinsocu","url":"http://example.com/","keywords":null,"description":"gavin的博客","author":{"@type":"Person","name":"gavinccc","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"gavin的博客"},"publisher":{"@type":"Organization","name":"gavinsocu","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"从51到32","description":"gavin的博客","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/07/08/%E4%BB%8E51%E5%88%B032/"},"author":{"@type":"Person","name":"gavinccc","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"gavinsocu","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/07/08/%E4%BB%8E51%E5%88%B032/","wordCount":0,"datePublished":"2023-07-08T01:52:35.000Z","dateModified":"2023-07-10T05:46:53.854Z","keywords":"从51到32","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"gavinsocu","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"gavinccc","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"gavin的博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"gavinsocu"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/07/08/从51到32/","name":"从51到32"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"gavinsocu","url":"http://example.com/","keywords":null,"description":"gavin的博客","author":{"@type":"Person","name":"gavinccc","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"gavin的博客"},"publisher":{"@type":"Organization","name":"gavinsocu","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"从51到32","description":"gavin的博客","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/07/08/%E4%BB%8E51%E5%88%B032/"},"author":{"@type":"Person","name":"gavinccc","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"gavinsocu","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/07/08/%E4%BB%8E51%E5%88%B032/","wordCount":0,"datePublished":"2023-07-08T01:52:35.000Z","dateModified":"2023-07-11T12:09:48.356Z","keywords":"从51到32","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
