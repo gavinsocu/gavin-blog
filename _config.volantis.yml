@@ -185,7 +185,7 @@ article:
     # show split line or not
     line_style: solid # hidden, solid, dashed, dotted
     # show author
-    author: false # true, false
+    author: true # true, false
     # show readmore button
     readmore: auto # auto, always
   # 文章详情页面的文章卡片本体布局方案
@@ -222,7 +222,7 @@ article:
       # ----------------
       # 版权声明组件 (for layout: post)
       copyright:
-        enable: false
+        enable: true
         permalink: '本文永久链接是：'
         content:
           - '博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议'
@@ -230,7 +230,7 @@ article:
           # 自定义版权组件：精细到文章的版权声明
         custom: false # 开启后替代上方内容的版权显示
         customData:
-          default: type1  # 默认授权声明
+          default: true  # 默认授权声明
           #############################
           # 你可以在文章的 front-matter 覆盖默认版权声明
           # 配置示例（均可选）： 
@@ -273,8 +273,8 @@ article:
       # 默认文章作者（可在 _data/author.yaml 中增加其他作者，并在 front-matter 中设置）
       # https://volantis.js.org/advanced-settings/#多人协同
       author:
-        avatar: volantis-static/media/org.volantis/blog/favicon/apple-touch-icon.png # https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/apple-touch-icon.png
-        name: 请设置文章作者
+        avatar: /img/tx.png # https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/apple-touch-icon.png
+        name: gavinccc
         url: /
       # 文章创建日期
       date:
