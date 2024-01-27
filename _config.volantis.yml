@@ -448,15 +448,15 @@ comments:
   # Isso
   # https://posativ.org/isso/
   isso:
-    url: https://example.com/(path/)
-    src: https://example.com/(path/)js/embed.min.js
+    url: https://blog.gavinccc.com/(path/)
+    src: https://blog.gavinccc.com/(path/)js/embed.min.js
     css:
     gravatar:
 
   # HashOver 暂不支持Pjax
   # https://www.barkdull.org/software/hashover
   hashover:
-    src: https://example.com/(path/)comments.php
+    src: https://blog.gavinccc.com/(path/)comments.php
 
   # Twikoo
   # https://twikoo.js.org/
