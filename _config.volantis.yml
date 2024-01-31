@@ -96,9 +96,9 @@ navbar:
     - name: 标签
       icon: fa-solid fa-tags
       url: tags/
-    - name: 归档
-      icon: fa-solid fa-archive
-      url: archives/
+    - name: 留言
+      icon: fa-solid fa-envelope-open-text
+      url: message/
     - name: 暗黑模式
       icon:  fas fa-moon
       toggle: darkmode
@@ -110,8 +110,8 @@ navbar:
       url: about/
     - name: 更多
       rows:
-        - name: 看 FAQ
-          url: faqs/
+        - name: 说说
+          url: artitalk/
         - name: 看 本站源码
           url: https://github.com/volantis-x/volantis-docs/
         - name: 提 Issue
@@ -302,8 +302,8 @@ article:
 
 ############################### Comments ############################### > start
 comments:
-  title: <i class='fa-solid fa-comments'></i> 评论
-  subtitle:
+  title: <i class='fa-solid fa-comments'></i> 
+  subtitle: 
   service: waline
   # 可选评论系统 #
 
@@ -864,19 +864,19 @@ plugins:
     # 不支持 Pjax
     # 配置项按照yml格式继续填写即可
     js: https://unpkg.com/artitalk
-    appId: ogP8qj3veMh0LFpFWMPOyF0X-MdYXbMMI # your appID
-    appKey: nHXLd3N3Jgh460t2iRQKWAtr # your appKEY
+    appId: yVTavP0YOq3jiY2HekOUB4FK-MdYXbMMI # your appID
+    appKey: 7Ju1Yzk1UjxZu05NnA7YaXCS # your appKEY
     # serverURL:  #leancloud绑定的api访问域名，使用国际版的话不需要填写
     # lang: # 语言设置，zh为汉语，en为英语，es为西班牙语。默认为汉语
     # pageSize: #每页说说的显示数量
-    # shuoPla: #在编辑说说的输入框中的占位符
-    # avatarPla: #自定义头像url的输入框的占位符
+    shuoPla: 200px #在编辑说说的输入框中的占位符
+    avatarPla: 0 #自定义头像url的输入框的占位符
     # motion: #加载动画的开关，1为开，0为关，默认为开
-    # bgImg: #说说输入框背景图片url
-    # color1: #说说背景颜色1&按钮颜色1
-    # color2: #说说背景颜色2&按钮颜色2
+    # bgImg: './source/img/keil.jpg' # 说说背景图片，不填写则为随机图片
+    color1: '#00C9A7' #说说背景颜色1&按钮颜色1
+    color2: '#845EC2' #说说背景颜色2&按钮颜色2
     # color3: #说说字体颜色
-    # cssUrl: #自定义css接口
+    # cssUrl: https://cdn.staticaly.com/gh/spaceskynet/Artitalk/master/dist/css/artitalk.min.css #自定义css接口
 
   # BBtalk https://bb.js.org
   bbtalk:
@@ -1047,7 +1047,7 @@ rightmenus:
 
 # 自定义右键菜单
 rightmenu:
-  enable: false
+  enable: true
   faicon: fa              # 公共图标类型 fa fal fa-solid fa-duotone
   # hr: 分割线, music: 音乐控制器
   layout: [home, hr, help, examples, contributors, hr, source_docs, source_theme, hr, print, darkmode, reading, music]
@@ -1068,26 +1068,7 @@ rightmenu:
   music:           # 当设定全局音乐播放器时，是否一直显示音乐控制菜单。false：仅当音乐播放时启用
     alwaysShow: true
   ### 自定义菜单 ###
-  help:
-    name: 常见问题
-    icon: fa fa-question
-    url: https://volantis.js.org/faqs/
-  examples:
-    name: 示例博客
-    icon: fa fa-rss
-    url: https://volantis.js.org/examples/
-  contributors:
-    name: 加入社区
-    icon: fa fa-fan fa-spin
-    url: https://volantis.js.org/contributors/
-  source_docs:
-    name: 本站源码
-    icon: fa fa-code-branch
-    url: https://github.com/volantis-x/volantis-docs/
-  source_theme:
-    name: 主题源码
-    icon: fa fa-code-branch
-    url: https://github.com/volantis-x/hexo-theme-volantis/
+
 ############################### Rightmenu ############################### > end
 
 
