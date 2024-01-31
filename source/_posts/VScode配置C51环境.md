@@ -4,7 +4,7 @@ date: 2024-01-28 01:19:23
 tags:  VScode
 ---
 
-<span style="font-size: xx-large;">基于Embedded IDE在VScode上配置keil c环境</span>
+<span style="font-size: x-large;">基于Embedded IDE在VScode上配置keil c环境</span>
 
 <br>
 
