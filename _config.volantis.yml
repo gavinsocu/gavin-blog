@@ -190,7 +190,7 @@ article:
       # 相关文章，需要安装插件 (for layout: post)
       # npm i hexo-related-popular-posts
       related_posts:
-        enable: false
+        enable: true
         title: 相关文章
         icon: fa-solid fa-bookmark
         max_count: 5
@@ -647,7 +647,7 @@ site_footer:
   # site source
   source: https://github.com/volantis-x/volantis-docs/
   # analytics using leancloud
-  analytics: >
+  analytics: 
     <span id="lc-sv">本站总访问量为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 次</span>
     <span id="lc-uv">访客数为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 人</span>
   # site copyright
@@ -738,7 +738,7 @@ plugins:
 
   # https://scrollrevealjs.org/api/reveal.html
   scrollreveal:
-    enable: #true
+    enable: true
     js: volantis-static/libs/scrollreveal/dist/scrollreveal.min.js # https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js
     distance: 32px
     duration: 800 # ms
@@ -753,14 +753,14 @@ plugins:
   ######## Plugins for ...
   # Button Ripple Effect
   nodewaves:
-    enable: #true
+    enable: true
     css: volantis-static/libs/node-waves/dist/waves.min.css # https://unpkg.com/node-waves@0.7.6/dist/waves.min.css
     js: volantis-static/libs/node-waves/dist/waves.min.js # https://unpkg.com/node-waves@0.7.6/dist/waves.min.js
 
   # fontawesome V6:  https://fontawesome.com/docs/web/style/animate
   # fontawesome animation for fontawesome V5
   fontawesome_animation:
-    enable: #true
+    enable: true
     css: volantis-static/libs/font-awesome-animation/font-awesome-animation.min.css # https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css
 
   # Typing Effects
