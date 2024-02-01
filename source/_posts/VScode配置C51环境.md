@@ -4,6 +4,7 @@ date: 2024-01-28 01:19:23
 tags:
     - VScode
     - Embedded IDE
+headimg: '../img/ktv.png'
 ---
 
 使用Embedded IDE在vscode上部署keil c环境，一举解决keil开发难受的问题
@@ -11,7 +12,7 @@ vscode，爽！
 
 <!-- more -->
 
-<span style="font-size: x-large;">···········</span>
+<span style="font-size: x-large;">基于Embedded IDE在vscode上配置C51环境</span>
 
 <br>
 

@@ -1,5 +1,5 @@
 ---
-title: VUE
+title: 基于VUE+Element+Vite的前端流程设计
 tags:
     - VUE
     - ElementUI
