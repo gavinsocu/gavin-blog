@@ -497,3 +497,218 @@ span {
 oky已经完成了！
 
 ### 组件
+
+这里不做过多赘述
+
+写在components目录下的文件即为组件
+需要注意的是
+{% note warning::组件需要具有复用性高，实用性强的特点，不能说我一个颜色都弄一个组件吧 %}
+
+>例子：
+我封装了一个头部导航栏可以循环复用
+我可以在其他页面使用，比如在首页和分类以及推荐都加上这个组件
+
+
+## ElementsPlus的引入与使用
+
+前端的大力发展也使的各种ui组件库层出不穷，什么是组件库？
+{% note success::我们自己会编写组件，会发现有些组件的复用性非常非常高，比如button、tag等，于是许多厂商为了统一开发风格，将大部分常用的组件做成组件库，方便调用，大部分也开源了 %}
+
+{% note info::其中，Elementui凭借它强大的稳定性，成为许多新人入门组件库的第一选择 %}
+
+大家可以去Element的官网查看文档
+
+{% link ElementPlus官方网站::https://element-plus.org/zh-CN/::https://element-plus.org/apple-touch-icon.png %}
+
+### Elements的引入（全局引入）
+
+在项目终端输入命令以导入Element
+
+{% tabs tab-id %}
+
+<!-- tab yarn -->
+
+```
+yarn add element-plus
+```
+
+<!-- endtab -->
+
+<!-- tab npm -->
+
+```
+npm install element-plus --save
+```
+
+<!-- endtab -->
+
+{% endtabs %}
+
+在main.js文件中加入以下代码
+```JavaScript
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
+
+app.use(ElementPlus)
+```
+
+现在我们的main.js如下
+```JavaScript
+import { createApp } from 'vue'
+import './style.css'
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
+import App from './App.vue'
+
+import router from './router/router.js'
+createApp(App).use(router).use(ElementPlus).mount('#app')
+```
+
+现在，我们就可以在任意一个文件中使用Element了
+
+### Element的使用
+
+我们需要一边浏览Element的组件文档一边使用Element组件
+
+{% link ElementPlus组件文档::https://element-plus.org/zh-CN/component/button.html::https://element-plus.org/images/element-plus-logo.svg %}
+
+比如我使用一个element的button组件
+
+我在官方文档查看代码，直接在需要的地方直接写进去
+
+![image](../img/vue10.png)
+
+让我们看看预览效果
+
+![image](../img/vue11.png)
+
+成功！
+
+其他组件，按需求使用即可
+
+## iconfont的引入与使用
+
+前端的工程避免不了使用到各种各样的图标，因此网上的图标库也是非常丰富的，比较著名的有fontawsome，其中iconfont是阿里巴巴图标库，是国内最大的图标库
+
+本工程图标库使用iconfont作为图标库
+
+{% link iconfont官网::https://www.iconfont.cn/::https://img.alicdn.com/imgextra/i4/O1CN01Z5paLz1O0zuCC7osS_!!6000000001644-55-tps-83-82.svg %}
+
+首先在官网登录后点开我的项目
+
+![image](../img/vue12.png)
+
+新建一个项目
+
+![image](../img/vue13.png)
+
+名字随便起，尽量英文
+
+随后在右上角的搜索栏搜索需要的图标，英文搜索最好，在这里我们搜索一下user
+
+可以看到有非常非常多的图标
+
+![image](../img/vue14.png)
+
+选择好之后将鼠标悬浮点击购物车图标
+
+![image](../img/vue15.png)
+
+选择好几款（可以再次搜索多选择几个）点击右上角购物车图标，随后点击添加到项目
+
+![image](../img/vue16.png)
+
+选择刚刚创建好的项目
+
+根据图片的步骤生成代码，记得打开在线链接
+
+![image](../img/vue17.png)
+
+复制这个代码即可
+
+在components目录新建icon.vue
+
+并输入以下代码
+```JavaScript
+<template>
+    <i class="iconfont" :class="[iconclass, extraclass]"></i>
+  </template>
+  
+  <script>
+  var map = {
+    user: 'icon-caidan07',
+    user1：'icon-custom-user'
+  };
+  export default {
+    props: {
+      type: {
+        type: String,
+        required: true,
+      },
+      extraclass: {
+        type: String,
+        default: '',
+      },
+    },
+    computed: {
+      iconclass() {
+        return map[this.type];
+      },
+    },
+  };
+  </script>
+  
+  <style scoped>
+    {/* 输入自己的项目代码 */}
+  @import '//at.alicdn.com/t/c/font_4186478_3epgt7s339h.css';
+  </style>
+```
+这里的map对象就是一个映射，将右边的字符串赋值给左边的变量，右边的字符串里面需要填写iconfont的代码
+
+![image](../img/vue18.png)
+
+左边随意取名，这样，在其他页面使用时就填左边自己取名的变量即可
+
+这样就打包好了一个icon组件，使用也非常简单
+
+比如就在刚刚的about界面里面使用
+
+```JavaScript
+<template>
+    <div class="head">
+        <Headerlist/>
+    </div>
+    <div class="main">
+        <el-button>你好</el-button>
+        <Icon type="user1" extraclass="icon"/>
+    </div>
+    
+</template>
+
+<script>
+import Headerlist from '../components/header.vue'
+import Icon from '../components/Icon.vue';
+export default {
+    name: 'home',
+    components: {
+        Headerlist,Icon
+    }
+}
+</script>
+
+<style scoped>
+.icon{
+    font-size: 30px;
+}
+</style>
+```
+这里Icon的type就是刚刚在icon组件定义的变量，对应着iconfont的图标
+还可以使用extraclass定义类名在父组件修改样式
+
+预览效果
+
+![image](../img/vue19.png)
+
+这样我们的icon就这样完结了
+
+
