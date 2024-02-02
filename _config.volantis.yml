@@ -275,9 +275,9 @@ article:
         icon: fa-solid fa-comment-dots
         desc: '条评论' # 条评论
       # artalk 文章评论数量
-      artalkcount:
-        icon: fa-solid fa-comment-dots
-        desc: '条评论' # 条评论
+      # artalkcount:
+      #   icon: fa-solid fa-comment-dots
+      #   desc: '条评论' # 条评论
       # 文章字数和阅读时长
       wordcount:
         icon_wordcount: fa-solid fa-keyboard
@@ -570,7 +570,7 @@ sidebar:
           unit: '篇'
         runtime:
           enable: true
-          data: '2020/01/01'    # 填写建站日期
+          data: '2023/07/01'    # 填写建站日期
           text: '已运行时间：'
           unit: '天'
         wordcount:
@@ -660,7 +660,7 @@ site_footer:
 plugins:
   ################ required plugins ################
   # jquery
-  globalJquery: false # 全局引入 jquery
+  globalJquery: true # 全局引入 jquery
   jquery: volantis-static/libs/jquery/dist/jquery.min.js # https://unpkg.com/jquery@3.6.0/dist/jquery.min.js
   # fontawesome Pro 版本：https://cdn.jsdelivr.net/gh/inkss/fontawesome@6.0.0/css/all.min.css
   fontawesome: volantis-static/libs/@fortawesome/fontawesome-free/css/all.min.css # https://unpkg.com/@fortawesome/fontawesome-free@6.1/css/all.min.css
@@ -748,7 +748,7 @@ plugins:
   ######## Plugins for SEO:
   # npm i hexo-wordcount
   wordcount:
-    enable: #true
+    enable: true
 
   ######## Plugins for ...
   # Button Ripple Effect
@@ -771,7 +771,7 @@ plugins:
   # 视差滚动效果 Slide Background
   parallax:
     enable: true
-    position: cover       # cover: sticky on the cover.   fixed: Fixed as background for the site.
+    position: fixed       # cover: sticky on the cover.   fixed: Fixed as background for the site.
     shuffle: true         # shuffle playlist
     duration: 10000       # Duration (ms)
     fade: 1500            # fade duration (ms) (Not more than 1500)

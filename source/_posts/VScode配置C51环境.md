@@ -4,7 +4,7 @@ date: 2024-01-28 01:19:23
 tags:
     - VScode
     - Embedded IDE
-headimg: '../img/ktv.png'
+headimg: '/img/ktv.png'
 ---
 
 使用Embedded IDE在vscode上部署keil c环境，一举解决keil开发难受的问题

@@ -106,6 +106,7 @@ deploy:
 
 import:
   head_begin:
+    - <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js"></script>
     - <meta name="msapplication-TileColor" content="#ffffff">
     - <meta name="msapplication-config" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/browserconfig.xml">
     - <meta name="theme-color" content="#ffffff">
@@ -124,9 +125,9 @@ import:
     - <meta name="msapplication-TileImage" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/favicon-32x32.png">
     - '<meta name="theme-color" content="#f4f4f4" media="(prefers-color-scheme: light)">'
     - '<meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">'
-    - <script src="/custom/darkmode.js" defer></script>
+    - <script defer src="/custom/darkmode.js" ></script>
     - <link rel="stylesheet" href="/custom/darkmode.css" type="text/css"/>
-    - <script src="/custom/binft.js" defer></script>
+    - <script defer src="/custom/binft.js"></script>
   head_end:
   body_begin:
   body_end:
