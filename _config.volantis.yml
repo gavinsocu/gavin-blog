@@ -133,8 +133,8 @@ cover:
   background: /img/background.png
   # background: https://bing.ioliu.cn/v1/rand?w=1920&h=1200
   # logo: /img/logo.png
-  title: 'Gavinccc'
-  subtitle: <div id="binft"></div>
+  title: <h1 style="color:black;font-weight:600;font-size:65px;margin:0">Gavinccc</h1>
+  subtitle: <div id="binft" style="color:black;font-weight:600;"></div>
   search:  gavinccc   # search bar placeholder
   features:
 
