@@ -34,7 +34,7 @@ Node.js是前端开发环境，它的出现造成了前端大爆发，也造就�
 
 **如果你并没有准备好这些必要的工具，请前往以下站点阅读配置**
 
-{% link Node.js开发环境部署::https://classwork.gdmuna.com/advanced-classwork/A20231121_nodejs-init::https://gdmuna.com/imgs/0.png %}
+{% link Node.js开发环境部署::https://share.gdmuna.com/soft_installer/nvm::https://gdmuna.com/imgs/0.png %}
 
 
 **由于npm镜像源在国外，国内速度受限,可以配置国内镜像源加速，参考以下文章配置**
