@@ -580,7 +580,7 @@ createApp(App).use(router).use(ElementPlus).mount('#app')
 
 让我们看看预览效果
 
-![image](../img/vue11.png)
+{% image /img/vue11.png::height=400px %}
 
 成功！
 
@@ -707,8 +707,614 @@ export default {
 
 预览效果
 
-![image](../img/vue19.png)
+{% image /img/vue19.png::height=400px %}
 
 这样我们的icon就这样完结了
 
 
+## 模板语法的使用  
+
+根据前面的章节，很多人会觉得，vue似乎有许多功能都木有使用出来，很正常
+{% note warning::毕竟我在上课开始的时候就说过，我并不会在直播课上教vue的语法等vue知识，我一直说，这些知识时需要自己去研究的，b站上面有许多vue的学习视频，需要自己去学习%}
+**但实际上，我也说过，我要教会大家基本能够开发前端小工程，然而一些基本的vue知识如果没有的话，的确时不可行的**
+
+
+以下是我学习vue时的学习视频，我的课程也是依此来构建的，大家学习vue时，按照自己的需求来挑选视频，适合自己的才是最好的   
+{% link vue开发宝典::https://www.bilibili.com/video/BV1wh41197Ja/?spm_id_from=333.337.search-card.all.click&vd_source=eb9228ddb7ee3296ae4533129fea06a5::https://duyi-bucket.oss-cn-beijing.aliyuncs.com/duyiedu/logo1.png%}
+
+好的，正式开始我们的vue的模板语法教程
+
+事实上我只教一个语法
+
+>data值在vue中的调用
+
+正常的一个vue文件是这样的
+
+```JavaScript
+<template>
+    <h1 id="name">李白</h1>
+    <h2 id="number">1110909098</h2>     
+</template>
+
+<script>
+
+</script>
+
+<style>
+
+</style>
+```
+{% note info::很明显，这个h1和h2分别是姓名和学号，我们当然可以写死在html部分，然而在实际开发中，这里的姓名和学号必然是用户自己的，需要他自己写进去传到后端，然后前端调用后端再显示，因此我们不可能将其写死在html部分，调用后端是使用JavaScript来调用的，调用回来的一般是对象或者变量，这里我们不阐述调用过程，只对JavaScript对象在html标签上的显示进行阐述 %}
+
+在常规的JavaScript中我们是怎么做的呢？
+
+```javascript
+<template>
+    <h1 id="name">李白</h1>
+    <h2 id="number">1110909098</h2>     
+</template>
+
+<script>
+// 创建一个 JavaScript 对象
+let person = {
+    name: "李白",
+    number: 1110909098,
+};
+
+// 获取 h1 标签元素
+let h1Element = document.getElementById("name");
+let h2Element = document.getElementById("number");
+
+// 将对象的 name 值设置为 h1 标签的文本内容
+h1Element.textContent = person.name;
+h2Element.textContent = person.number;
+</script>
+
+<style>
+
+</style>
+```
+
+{% note up::看起来似乎也不难，然而这样子可读性的降低，如果能够直接在html里面调用变量或者对象就好了 %}
+
+{% note success::很显然，铺垫这么久，要的就是告诉大家vue实现了这个功能 %}
+
+以下就是vue的演示
+
+```js
+<template>
+    <h1 id="name">{{ name }}</h1>
+    <h2 id="number">{{ number }}</h2>     
+</template>
+
+<script>
+export default {
+    data() {
+        return {
+            name: '李白',
+            number: 1110909098
+        }
+    }
+}
+</script>
+
+<style>
+
+</style>
+```
+
+很明显，无论是可读性还是实用性，vue都遥遥领先
+
+还有！还有两处地方调用变量时会使用vue特性，分别是html标签头和script标签内部
+
+在这里我直接一次性展示完了
+```javascript
+<template>
+    <h1 id="name">{{ name }}</h1>
+    <h2 id="number" :style="{color:color}">{{ number }}</h2>
+    <button @click="changeColor">改变颜色</button>
+    <intput :type="type" v-model="name"/>  
+</template>
+
+<script>
+export default {
+    data() {
+        return {
+            name: '李白',
+            number: 1110909098,
+            color: 'red',
+            type: 'text'
+        }
+    },
+    methods: {
+        changeColor() {
+            this.color = 'blue'
+        }
+    }
+}
+</script>
+
+<style>
+
+</style>
+```
+模板语法篇展示完毕
+
+
+## v-for循环
+
+现在你是程序猿，我给你一个需求，这个需求是，我要你做一个卡片，里面是一个照片，卡片的数量取决于客户上传的照片数量，你会怎么做？
+
+由于数量不是固定的，写死的做法一定不行，如下面这个，一定会被领导骂死
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Elements</title>
+</head>
+<body>
+    <div id="container"><img/></div>
+    <div id="container"><img/></div>
+    <div id="container"><img/></div>
+    <div id="container"><img/></div>
+    <div id="container"><img/></div>
+    <div id="container"><img/></div>
+    <div id="container"><img/></div>
+    <div id="container"><img/></div>
+    <div id="container"><img/></div>
+    <div id="container"><img/></div>
+    <div id="container"><img/></div>
+    <div id="container"><img/></div>
+    <div id="container"><img/></div>
+    <div id="container"><img/></div>
+</body>
+</html>
+```
+
+聪明的你一定想得到使用js完成动态创建即可，如下面的代码
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Elements</title>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script>
+        const container = document.getElementById('container');
+        const numElements = 10; // 这里可以根据需要设置元素的数量
+
+        for (let i = 0; i < numElements; i++) {
+            const div = document.createElement('div');
+            const img = document.createElement('img');
+            div.appendChild(img);
+            container.appendChild(div);
+        }
+    </script>
+</body>
+</html>
+```
+
+很不错，可以使用简单的js循环完成构建，不过呢，在vue中，我们不需要再在js中写这些代码，可以直接在html中使用for循环
+```html
+<template>
+    <div>
+        <div id="container" v-for="item in datalist" :key="item.id">
+            <img :src="item.src"/>
+            <h2>{{ item.name }}</h2>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    data() {
+        return {
+            datalist:[
+                {id:1,src:'../assets/img/1.jpg',name:'李一'},
+                {id:2,src:'../assets/img/2.jpg',name:'李二'},
+                {id:3,src:'../assets/img/3.jpg',name:'李三'},
+                {id:4,src:'../assets/img/4.jpg',name:'李四'},
+                {id:5,src:'../assets/img/5.jpg',name:'李五'},
+                {id:6,src:'../assets/img/6.jpg',name:'李六'},
+                {id:7,src:'../assets/img/7.jpg',name:'李七'},
+                {id:8,src:'../assets/img/8.jpg',name:'李八'},
+                {id:9,src:'../assets/img/9.jpg',name:'李九'},
+                {id:10,src:'../assets/img/10.jpg',name:'李十'},
+                {id:11,src:'../assets/img/11.jpg',name:'李十一'},
+                {id:12,src:'../assets/img/12.jpg',name:'李十二'},
+                {id:13,src:'../assets/img/13.jpg',name:'李十三'},
+                {id:14,src:'../assets/img/14.jpg',name:'李十四'},
+                {id:15,src:'../assets/img/15.jpg',name:'李十五'},
+            ]
+        }
+    },
+}
+</script>
+
+<style>
+
+</style>
+```
+在这里面，我们使用循环绑定了datalist数组，将其图片路径绑定在img标签的src上，再将数组中的name绑定再h1标签值里，这样，客户上传多少图片和名字，我们都可以将图片路径传至datalist数组中，这样就实现了动态的循环元素
+
+这里的**item in datalist**是将datalist数组绑定于item，这样在循环的元素中使用datalist的值就用item.值即可（如上面的代码所示）
+
+{% folding green::这里面的key是为了以下因素(点击查看) %}
+>性能优化：key 属性帮助 Vue 识别每个列表中的元素，从而在更新 DOM 时更高效地定位和更新元素，减少不必要的 DOM 操作，提高性能。
+
+>唯一性：key 属性确保每个循环生成的元素具有唯一的标识符，避免出现相同 key 值导致的渲染问题。
+
+>追踪变化：通过 key 属性，Vue 能够准确地追踪每个元素的变化，确保在列表数据发生变化时正确更新 DOM。
+
+>复用元素：key 属性还有助于 Vue 识别元素之间的关系，以便在可能的情况下尽可能地复用已存在的 DOM 元素，而不是销毁和重新创建。
+{% endfolding %}
+
+
+## 组件传值
+
+
+很多时候，我们会将一些复用性高的元素组件化，比如我们将上面v-for循环部分的代码组件化我们就会发现一个问题（以下称之为card组件）
+- 如果我在home界面使用这个card组件（可能是为了统一卡片风格）home页面可能是为了摆放热门照片
+- 然后我们又在user页面使用这个card组件，user界面一般是是摆放个人照片  
+
+{% note bug red::很显然，如果在这个car的组件中直接将图片路径等信息直接传入，就会出现在home组件和user组件都是一样的图片 %}
+我们需要肯定不是这样，我们需要的是每一个页面都是由每个页面自己决定的，这个时候我们就需要在父组件中将值传给子组件了
+
+
+**那么，怎么传值呢？**
+答案就是使用vue的props属性，让我们来看看最简单的使用
+```js
+<template>
+  <div>
+    <ChildComponent :message="parentMessage" />
+  </div>
+</template>
+
+<script>
+import ChildComponent from './ChildComponent.vue';
+
+export default {
+  components: {
+    ChildComponent
+  },
+  data() {
+    return {
+      parentMessage: 'Hello from Parent!'
+    };
+  }
+}
+</script>
+
+// ChildComponent.vue
+<template>
+  <div>
+    <p>{{ message }}</p>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    message: String // 指定 message 的类型为字符串
+  }
+}
+</script>
+```
+
+知道怎么使用了吧，让我们依此来完善我们的card组件
+ 
+已知，我们card需要的是数组属性
+直接来吧
+{% tabs tab-id %}
+
+<!-- tab card.vue -->
+```js
+<template>
+    <div>
+        <div id="container" v-for="item in datalist" :key="item.id">
+            <img :src="item.src"/>
+            <h2>{{ item.name }}</h2>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    props: {
+        datalist: {
+            type: Array,
+            default: () => []
+        }
+    }
+}
+</script>
+
+<style>
+.container {
+    height: 100px;
+    width: 100px;
+    border: 1px solid #000;
+    margin: 10px;
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    img{
+        width: 80%;
+        height: 80%;
+    }
+}
+</style>
+```
+<!-- endtab -->
+
+<!-- tab home.vue -->
+
+```js
+<template>
+    <div class="head">
+        <Headerlist/>
+    </div>
+    <div class="main">
+        <!-- <livecard :datalist="alist" ></livecard> -->
+        <card :datalist="blist"></card>
+    </div>
+    
+</template>
+
+<script>
+import livecard from '../components/livecard.vue'
+import Headerlist from '../components/header.vue'
+import exmaple from '../components/card.vue'
+export default {
+    name: 'home',
+    components: {
+        Headerlist,livecard,card
+    },
+    data(){
+        return{
+            // alist:[
+            //     {
+            //         id:1,
+            //         imgurl:'https://element-plus.org/images/element-plus-logo.svg',
+            //         title:'element-plus',
+            //         tag:'vue3.0',
+            //         space:'kuaile',
+            //         yanse:'success'
+            //     }
+            // ],
+            blist:[
+                {id:1,src:'../assets/img/1.jpg',name:'李一'},
+                {id:2,src:'../assets/img/2.jpg',name:'李二'},
+                {id:3,src:'../assets/img/3.jpg',name:'李三'},
+            ]
+        }
+    }
+}
+</script>
+```
+
+<!-- endtab -->
+
+<!-- tab user.vue -->
+
+```js
+<template>
+    <span class="span"><el-button @click="gomessage">我的信息</el-button></span>
+    <card :datalist="clist"></card>
+</template>
+
+<script>
+import exmaple from '../components/card.vue'
+export default {
+    components: {
+        card
+    },
+    name: 'mymessage',
+    methods:{
+        gomessage(){
+            this.$router.push('/user/mymessage')
+        }
+    },
+    data(){
+        return{
+            clist:[
+                {id:1,src:'../assets/img/6.jpg',name:'李六'},
+                {id:2,src:'../assets/img/7.jpg',name:'李七'},
+                {id:3,src:'../assets/img/8.jpg',name:'李八'},
+                {id:4,src:'../assets/img/9.jpg',name:'李九'},
+            ]
+        }
+    }
+}
+</script>
+
+<style scoped>
+.span{   
+    border: 2px solid #000;
+    color: #000;
+}
+</style>
+```
+
+<!-- endtab -->
+
+{% endtabs %}
+
+让我们来看一下效果
+
+{% tabs tab-id %}
+
+<!-- tab home页面效果 -->
+
+{% image /img/vue21.png::height=400px %}
+
+<!-- endtab -->
+
+<!-- tab user页面效果 -->
+
+{% image /img/vue20.png::height=400px %}
+
+<!-- endtab -->
+
+{% endtabs %}
+
+因为我并没有放真实的图片，大家将就着看
+
+在icon篇也是使用了组件传值的原理
+
+最后献上我的真实的livecard以供大家参考
+
+{% tabs tab-id %}
+
+<!-- tab livecard.vue -->
+
+```js
+//记住是全局引入了element的
+<template>
+    <div class="body">
+        <div class="main" v-for="item in datalist" :key="item.id">
+            <div class="left">
+                <div class="image">
+                    <img :src="item.imgurl" alt="">
+                </div>
+            </div>
+            <div class="right">
+                <div class="text">
+                    <div><h3>{{ item.title }}</h3></div>
+                    <div class="tagfather"><el-tag class="ml-2 tagnew" :type="item.yanse">{{ item.tag }}</el-tag></div>
+                </div>
+                <div class="space">
+                    <h4>{{ item.space }}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    name: 'livecard',
+    props: {
+        datalist: {
+            type: Array,
+            default: () => []
+        }
+    }
+}
+</script>
+
+<style scoped>
+.main{
+    width: 100vw;
+    height: 100px;
+    border: 1px solid #000;
+}
+.left{
+    width: 30%;
+    height: 100px;
+    float: left;
+    border: 1px solid #000;
+}
+.right{
+    width: 70%;
+    height: 100px;
+    float: left;
+}
+
+.image img{
+    width: 100px;
+    height: 90px;
+    object-fit: cover;
+}
+.text{
+    width: 100%;
+    height: 50px;
+    position: relative;
+}
+.text h3{
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    font-size: 20px;
+}
+.space{
+    width: 100%;
+    height: 50px;
+    position: relative;
+}
+.space h4{
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    font-size: 17px;
+}
+.tagnew{
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    padding: 0 10px;
+    border: none;
+    cursor: pointer;
+}
+</style>
+```
+
+<!-- endtab -->
+
+<!-- tab home.vue -->
+
+```js
+<template>
+    <div class="head">
+        <Headerlist/>
+    </div>
+    <div class="main">
+        <livecard :datalist="alist" ></livecard>
+    </div>
+    
+</template>
+
+<script>
+import livecard from '../components/livecard.vue'
+import Headerlist from '../components/header.vue'
+export default {
+    name: 'home',
+    components: {
+        Headerlist,livecard
+    },
+    data(){
+        return{
+            alist:[
+                {
+                    id:1,
+                    imgurl:'https://element-plus.org/images/element-plus-logo.svg',
+                    title:'element-plus',
+                    tag:'vue3.0',
+                    space:'kuaile',
+                    yanse:'success'
+                }
+            ]
+        }
+    }
+}
+</script>
+```
+
+<!-- endtab -->
+
+<!-- tab home页面预览效果 -->
+
+{% image /img/vue22.png::height=400px %}
+
+<!-- endtab -->
+
+{% endtabs %}
+
+本文就此结束，有需要可以联系
