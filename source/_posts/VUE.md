@@ -1317,4 +1317,392 @@ export default {
 
 {% endtabs %}
 
+## 路由跳转的进阶使用
+
+### meta的使用
+
+根据，我们上面的路由篇。为我们可以使用并创建简单的路由跳转，但是同时我们也会陷入一个难题，比如微信，下面的导航栏确实是作用域范围最广的组件，但是它却并不是全作用域，我们点开朋友圈，点开朋友的聊天界面，点开我们的设置界面，都会发现，下面的导航栏消失了，这很正常，非常符合我们的逻辑需求，然而对于前面的学习，似乎有点懵了，似乎下面的主导航栏已经成为必不可少或者说我们无法令其消失。
+
+很显然，我的教程并不能让大家做到，好吧，我的问题
+
+不过也不难，使用简单的v-if或v-show语句即可(什么？v-if和v-show你不知道是什么？百度哈)
+
+以下是路由跳转的进阶使用和小技巧
+
+让我们来看一下逻辑
+
+首先界面是这样的
+
+![image](/img/vue23.png)
+
+一个基础的"我的"界面，其中有"我的信息"按钮，点进去可以看到个人详细信息
+>很明显，当我点击这个按钮时，下方的导航栏应该消失，取而代之的是上方出现返回按钮，对于这个界面，作用域范围最广的组件就是上方的返回导航栏
+
+那么得知这个概念，我们就要动手了，该怎么做？
+
+{% note success::当点击"我的信息"按钮时，取消下方导航栏的显示，增加上方导航栏的显示，上方导航栏可以直接当作"我的信息"界面的组件之一 %}
+
+让我们关注到之前写路由文件router.js时写的一个属性**meta**
+
+官网对它的解释时这样的
+
+![image](/img/vue24.png)
+
+{% link vue-router对meta的解释::https://router.vuejs.org/zh/api/interfaces/RouteLocationNormalizedLoaded.html#Properties-meta::https://router.vuejs.org/logo.svg %}
+
+不知道大家有没有看懂，反正我没有，简而言之，就是router的一个属性，可以将其当作正常的对象的一个属性来使用，其次，由于router我们全局注册了，因此这个属性我们也可以全局使用
+
+我们是这么写router的
+
+```js
+    {
+      path: '/home',
+      name: 'home',
+      component: () => import('../pages/home.vue'),
+      meta: {
+        home: true,
+      },
+    }
+```
+
+>值得注意的是,这个属性在这里是一个布尔值，它为true的条件是当前的路由为/home，意思就是当前页面是什么路由，哪个的meta就为true  
+
+因此我们只要检测路由不是"首页","分类"，"推荐"，"我的"四个界面即可，我们可以给所有在其之下的页面的meta取名为同样的名字，如childrenPage(子页面)，随后我们检测childrenPage的meta值，当其为true时，将下方导航栏的显示取消，当其为flase时，将其显示  
+```js
+    {
+      path: '/user/myMassage',
+      name: 'myMassage',
+      component: () => import('../pages/userPages/myMassage.vue'),
+      meta: {
+        childrenPage: true,
+      },
+    },
+    {
+      path: '/user/historyMassage',
+      name: 'historyMassage',
+      component: () => import('../pages/userPages/historyMassage.vue'),
+      meta: {
+        childrenPage: true,
+      },
+    },
+    {
+      path: '/user/moneyMassage',
+      name: 'moneyMassage',
+      component: () => import('../pages/userPages/moneyMassage.vue'),
+      meta: {
+        childrenPage: true,
+      },
+    },
+```
+
+如果是在原生js中，这一步可能又要费许多功夫，但是在vue里面的v-if和v-show非常轻松的帮我们解决了这一痛点
+
+他们的共同点，当条件为假时，页面上不会显示该元素标签
+使用方法如下
+
+```html
+<div v-if="a == 1">HELLO</div>
+<div v-show="a == 1">HELLO</div>
+```
+当变量a不等于1时，该div不会被显示出来
+
+{% note warning red::v-if和v-show的不同：
+v-show如果不满足条件相当于display: none，页面渲染完成后，你其实是可以用js去操纵隐藏起来的DOM的  
+
+而v-if如果不满足条件，在页面渲染完成后，对应的DOM是直接不会在HTML代码中出现的  
+
+当你有一部分隐藏的页面组件想在页面渲染完成后用原生js去操纵，或者允许爬虫之类的东西来抓取隐藏部分，你就只能用v-show %}
+
+详情查看官网
+{% link vue官网对v-if和v-show的解::https://cn.vuejs.org/api/built-in-directives.html#v-show::https://play.vuejs.org/logo.svg %}
+
+这个时候，我们找到我们下方导航栏的位置，写入这个代码**v-show="!$route.meta.childrenPage"**
+```js
+<template>
+  <div class="main">
+    <router-view></router-view>
+  </div>
+  <div class="foot" v-show="!$route.meta.childrenPage">
+    <div class="footmenu">
+      <span @click="goToHome"><Icon type="shouye" extraclass="icon" :class="{ iconActive: isActive == 1 }" /></span>
+      <span @click="goToClassify"><Icon type="fenlei1" extraclass="icon" :class="{ iconActive: isActive == 2 }" /></span>
+      <span @click="goToAbout"><Icon type="tuijian" extraclass="icon" :class="{ iconActive: isActive == 3 }" /></span>
+      <span @click="goToUser"><Icon type="user" extraclass="icon" :class="{ iconActive: isActive == 4 }" /></span>
+    </div>
+  </div>
+</template>
+```
+看看效果
+
+![image](/img/vue25.png)
+
+下方导航栏成功消失
+后续出现这些情况都可以照葫芦画瓢了
+
+### params的使用
+
+博主写到这有点难受，随便写写吧
+
+params也是vue-router的属性之一，使用它可以创建动态路由
+
+{% link vue-router官网对params的解释::https://router.vuejs.org/zh/api/interfaces/RouteLocationNormalizedLoaded.html#Properties-params::https://router.vuejs.org/logo.svg %}
+
+>有的时候，我们需要点击一个按钮，进入子路由，随后显示页面，但是会出现一种情况，如美团的美食界面，很明显都是一样的，只是图片和买哦书有所不同，但是我们会发现，本来它的美食列表就是循环实现的，怎么才能点击进入新路由还可以使用同一个组件呢，使用同一个组件简单，可是我们的router只能有一个，不可能全部美食都是一个路由吧  
+
+**这个时候就需要我们的动态路由了，可以实时创建路由**
+
+这个东西确实对小白不太好描述，因此，我们直接通过一些简单的例子来学习
+
+这个是我们的列表页
+
+{% image /img/vue27.png::height=400px %}
+
+其router.js如下
+
+```js
+        {
+            path: "/diet",
+            name: "diet",
+            component: () => import("../diet/diet.vue"),
+        }
+```
+使用了vue-for循环实现了列表的效果，接下来是需要点击不同的卡片进入不同的界面(可以说是相同的界面，当时数据是不同的)
+效果如下
+
+{% tabs tab-id %}
+
+<!-- tab 乌鸡汤 -->
+
+{% image /img/vue28.png::height=400px %}
+
+<!-- endtab -->
+
+<!-- tab 酸梅汤 -->
+
+{% image /img/vue29.png::height=400px %}
+
+<!-- endtab -->
+
+{% endtabs %}
+
+可以看到，除了数据不同，其余样式均一样，因此我们实现这个效果一定是使用了同一个组件
+巧妙的是，我们路由的显示，又是不一样的，一个是**localhost:5173/diet/虫花草乌鸡汤**，一个是**localhost:5173/diet/酸梅汤**
+和我们之前不一样，我们之前的写法只能够一个路由匹配一个组件，现在，我们实现了多个路由匹配一个组件
+
+我们来看一下这个组件的router是怎么写的
+
+```JS
+{
+    path:'/diet/:herbsName',
+    name:'herbsPage',
+    component:()=>import('../components/herbs.vue'),
+    meta:{
+        childrenPage:true
+    },
+}
+```
+和以往不同，这次的path在**herbsName**前面加了一个:
+这是动态路由的意思，加上:,这个路由就变成了动态的，可以在任何界面操控，赋予任何的值，相当于一个全局变量
+
+>知道了这些之后，我们可以这么做，在父组件点击哪个卡片，就跳转组件，同时，将herbsName这个动态这个路由赋值为卡片的名称
+>随后，我们可以在子组件中读取该路由的值（herbsName），在data部分(data在工程中由后端数据库提供，在这里我们导入json文件当作后端)寻找相对应的对象集，将对象集中的数据放在子组件上显示即可
+
+首先，我们看一下父组件的源代码
+```html
+<template>
+    <div class="cll">
+        <div class="remen" v-for="item in dietlist" :key="item.id" @click="redirectToPage(item.name)">
+            <div class="img">
+                <img :src="item.img" alt="">
+            </div>
+            <div class="text">
+                <div class="zt1">
+                    <div class="m"><h3>{{ item.name }}</h3></div>
+                    <div class="leibie"><van-tag :type="item.color" class="sss"> {{ item.leibie }}</van-tag></div>
+                </div>
+                <div class="zt2"><p>{{ item.gonxiao }}</p></div>
+            </div>
+        </div>
+        <van-back-top bottom="10vh"/>
+    </div>
+</template>
+
+<script>
+import { Tag,BackTop } from 'vant';
+export default {
+    components: {
+        vanTag:Tag,
+        vanBackTop:BackTop
+    },
+    props:{
+        dietlist:{
+            type: Array,
+            required: true,
+        },
+    },
+    methods:{
+        redirectToPage(itemName) {
+        // 根据卡片的id进行页面跳转
+        // 使用Vue Router的例子
+        this.$router.push({ name: 'herbsPage', params: { herbsName:itemName } });
+        },
+    }
+}
+</script>
+```
+
+核心在于
+```js
+redirectToPage(itemName) {
+  // 根据卡片的id进行页面跳转
+  // 使用Vue Router的例子
+  this.$router.push({ name: 'herbsPage', params: { herbsName:itemName } });
+  }
+```
+该函数实现了跳转至名为**herbsPage**的页面组件的同时将params属性进行修改，将**herbsName**赋值为通过函数传入的**itemName**,在这里，itemName也就是卡片的名称（乌鸡汤、酸梅汤等）
+
+接下来我们来看看子组件的源代码,为避免出现不理解的问题，我将json文件也一起放出来
+
+{% tabs tab-id %}
+
+<!-- tab 子组件源代码 -->
+
+```html
+<template>
+    <Header :title="selectedObject.name"/>
+    <div class="main">
+        <div class="head">
+            <span>{{ selectedObject.name }}</span>
+        </div>
+        <img :src="`../${selectedObject.img}`" alt="食材图片" class="img"/>
+        <div class="cook">
+            <span class="listname"><Icon type="leaf" extraclass="icon"/>食材</span>
+            <div class="listtext">{{ selectedObject.material }}</div>
+        </div>
+        <div class="cook">
+            <span class="listname"><Icon type="cook" extraclass="icon"/>做法</span>
+            <ol>
+                <li class="listtext" v-for="(step, index) in cookSteps" :key="index">{{ step }}。</li>
+            </ol>
+            <video :src="selectedObject.video" controls></video>
+        </div>
+        <div class="cook">
+            <span class="listname"><Icon type="list" extraclass="icon"/>功效</span>
+            <div class="listtext">{{selectedObject.gonxiao}}</div>
+        </div>
+        <div class="cook">
+            <span class="listname"><Icon type="warning" extraclass="icon"/>禁忌</span>
+            <div class="listtext">{{ selectedObject.taboo }}</div>
+        </div>
+        <div style="height: 30px;"></div>
+    </div>
+</template>
+
+<script>
+import Icon from './icon.vue'
+import jsonData from '../json/herbslist.json'
+import Header from './backHead1.vue'
+export default {
+    components: {
+        Header,Icon
+    },
+    data(){
+        return{
+            selectedObject: {},
+        }
+    },
+    computed: {
+        cookSteps() {
+            if (this.selectedObject.cook) {
+                return this.selectedObject.cook.split('。').filter(step => step.trim() !== '');
+            }
+            return [];
+        }
+    },
+    created(){
+        this.loadCardData();
+    },
+    methods: {
+        loadCardData() {
+            const herbsName = this.$route.params.herbsName;
+                // 你可以根据实际情况使用异步请求加载数据
+            setTimeout(() => {
+                    // 根据herbsName加载对应卡片的数据，这里只是示例
+                let selectedObject = jsonData.find(obj => obj.name == herbsName);
+                if (selectedObject) {
+                this.selectedObject = selectedObject;
+                } else {
+                console.error('未找到匹配的对象');
+                }
+            }, 500); // 模拟异步加载的延迟
+        },
+    },
+}
+</script>
+```
+
+<!-- endtab -->
+
+<!-- tab json文件 -->
+
+```json
+[
+    {"id": 1,"value":"10", "name": "虫草花乌鸡汤", "gonxiao": "止血化痰·益肝补肾，养气补精", "img": "./wjt.jpg", "leibie": "汤类", "color": "primary", "video": "../wjt.mp4", 
+    "material": "乌鸡1只，虫草花10克，姜片3片，料酒1汤匙，盐适量。",
+    "cook": "1.乌鸡去毛、内脏、洗净，切块，用开水焯一下，捞出洗净。2.虫草花洗净，用开水焯一下，捞出洗净。3.将乌鸡块、虫草花、姜片、料酒放入砂锅中，加入适量清水，大火煮沸后转小火炖2小时。4.加入盐调味即可。",
+    "taboo": "脾胃虚寒者、痰湿者不宜多食。"},
+    {"id": 2,"value":"9", "name": "酸梅汤", "gonxiao": "除热送凉、生津止漏、祛痰止渴", "img": "./smt.jpg", "leibie": "汤类", "color": "primary", "video": "../smt.mp4",
+    "material": "酸梅干10克，冰糖适量，水适量。",
+    "cook": "1.酸梅干洗净，用开水焯一下，捞出洗净。2.将酸梅干放入砂锅中，加入适量清水，大火煮沸后转小火炖2小时。3.加入冰糖调味即可。",
+    "taboo": "脾胃虚寒者、痰湿者不宜多食。"},
+    {"id": 3,"value":"3", "name": "薄荷粥", "gonxiao": "疏散风热.清利咽喉", "img": "./bhz.jpg", "leibie": "粥类", "color": "success", "video": "../bhz.mp4",
+    "material": "大米100克，薄荷叶10克，冰糖适量，水适量。",
+    "cook": "1.大米淘洗干净，薄荷叶洗净。2.将大米、薄荷叶放入砂锅中，加入适量清水，大火煮沸后转小火炖2小时。3.加入冰糖调味即可。",
+    "taboo": "脾胃虚寒者、痰湿者不宜多食。"},
+    {"id": 4,"value":"6", "name": "金橘茶", "gonxiao": "消积止呕", "img": "./jjc.jpg", "leibie": "茶类", "color": "warning", "video": "../jjc.mp4",
+    "material": "金橘1个，冰糖适量，水适量。",
+    "cook": "1.金橘洗净，切片。2.将金橘片放入砂锅中，加入适量清水，大火煮沸后转小火炖2小时。3.加入冰糖调味即可。",
+    "taboo": "脾胃虚寒者、痰湿者不宜多食。"},
+    {"id": 5,"value":"16", "name": "人参酒", "gonxiao": "补气，活血驱寒", "img": "./rsj.jpg", "leibie": "酒类", "color": "danger", "video": "../rsj.mp4",
+    "material": "人参10克，白酒500克。",
+    "cook": "1.人参洗净，切片。2.将人参片放入瓶中，加入白酒，密封放置1个月即可。",
+    "taboo": "脾胃虚寒者、痰湿者不宜多食。"},
+    {"id": 6,"value":"18", "name": "金银花茶", "gonxiao": "清热解毒", "img": "./jyhc.jpg", "leibie": "茶类", "color": "warning", "video": "../jyhc.mp4",
+    "material": "金银花10克，冰糖适量，水适量。",
+    "cook": "1.金银花洗净。2.将金银花放入砂锅中，加入适量清水，大火煮沸后转小火炖2小时。3.加入冰糖调味即可。",
+    "taboo": "脾胃虚寒者、痰湿者不宜多食。"},
+    {"id": 7,"value":"1", "name": "蜂蜜柚子茶", "gonxiao": "清热解毒", "img": "./fmyzc.jpg", "leibie": "茶类", "color": "warning", "video": "../fmyzc.mp4",
+    "material": "柚子1个，蜂蜜适量，水适量。",
+    "cook": "1.柚子洗净，切片。2.将柚子片放入砂锅中，加入适量清水，大火煮沸后转小火炖2小时。3.加入蜂蜜调味即可。",
+    "taboo": "脾胃虚寒者、痰湿者不宜多食。"}
+]
+```
+
+<!-- endtab -->
+
+{% endtabs %}
+
+在子组件源代码中，我们在生命周期函数中调用了**loadCardData**函数
+```js
+loadCardData() {
+    const herbsName = this.$route.params.herbsName;
+        // 你可以根据实际情况使用异步请求加载数据
+    setTimeout(() => {
+            // 根据herbsName加载对应卡片的数据，这里只是示例
+        let selectedObject = jsonData.find(obj => obj.name == herbsName);
+        if (selectedObject) {
+        this.selectedObject = selectedObject;
+        } else {
+        console.error('未找到匹配的对象');
+        }
+    }, 500); // 模拟异步加载的延迟
+}
+```
+该函数很简单，获取当前路由的**params**属性值，就是路由的**herbsName**值,随后将这个值在json中进行查找，并将该值所在的对象提取出来并赋给**selectedObject**，然后我们就可以对selectedObject随便操控了，接下来的事情就是一马平川了
+
+ok了家人们
+
+
 本文就此结束，有需要可以联系
+邮箱：2084896301@qq.com
+微信：wxcf9687
