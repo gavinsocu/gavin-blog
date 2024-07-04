@@ -21,8 +21,6 @@ vscode，爽！
 
 还是使用EIDE与vscode，这里不过多赘述
 
-<br>
-
 ### 打开EIDE安装扩展工具包
 分别是cppcheck、GNU Arm Embedded Toolchain、OpenOCD
 
