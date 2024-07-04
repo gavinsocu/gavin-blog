@@ -9,11 +9,12 @@
     "server": "hexo server"
   },
   "hexo": {
-    "version": "7.1.1"
+    "version": "7.3.0"
   },
   "dependencies": {
     "artalk": "^2.5.5",
-    "hexo": "^7.1.1",
+    "hexo": "^7.3.0",
+    "hexo-cli": "^4.3.2",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-index": "^3.0.0",
@@ -27,6 +28,6 @@
     "hexo-theme-landscape": "^1.0.0",
     "hexo-theme-volantis": "^5.8.0",
     "hexo-wordcount": "^6.0.1",
-    "npm": "^9.7.2"
+    "npm": "^10.8.1"
   }
 }
