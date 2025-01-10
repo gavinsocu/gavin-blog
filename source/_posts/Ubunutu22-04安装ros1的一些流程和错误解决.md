@@ -72,12 +72,12 @@ sudo apt install libboost-all-dev uuid-dev python3-nose google-mock libgtest-dev
 
 ```bash
 ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release -DPYTHON_EXECUTABLE=/usr/bin/python3
-```  
+```
 
 这里会编译184个包，如果编译成功第6点后面就不用看了。  
 
 
-#### 错误解决
+#### 错误解决  
 
 - catkin问题
 
