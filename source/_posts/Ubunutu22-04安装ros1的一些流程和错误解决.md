@@ -19,7 +19,7 @@ headimg: '/img/rs.png'
 **为了避免墙的问题，建议直接开全局代理或者用户代理**
 怎么开这里就不教了
 
-### 1.添加ros源  
+### 添加ros源  
 
 由于ROS1官网不支持，因此只能添加ROS2的源
 ```bash
@@ -30,7 +30,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-a
 sudo apt update
 ```
 
-### 2.安装编译依赖  
+### 安装编译依赖  
 
 ```bash
 sudo apt-get install python3-rosdep python3-rosinstall-generator python3-vcstools python3-vcstool build-essential
@@ -38,14 +38,14 @@ sudo pip3 install -U rosdep rosinstall_generator vcstool
 sudo pip3 install --upgrade setuptools
 ```
 
-### 3.新建catkin workspace  
+### 新建catkin workspace  
 
 ```bash
 mkdir ~/ros_catkin_ws
 cd ~/ros_catkin_ws
 ```
 
-### 5.拉取ROS Noetic源码  
+### 拉取ROS Noetic源码  
 
 ```bash
 rosinstall_generator desktop --rosdistro noetic --deps --tar > noetic-desktop.rosinstall
@@ -55,7 +55,7 @@ vcs import --input noetic-desktop.rosinstall ./src
 
 这里的第一步容易遇到拒绝访问的报错，所以还是尽快开代理就好了，第三步也容易被墙，代理！！！！！  
 
-### 6.手动安装ROS Noetic依赖  
+### 手动安装ROS Noetic依赖  
 
 ```bash
 sudo apt install libboost-all-dev uuid-dev python3-nose google-mock libgtest-dev libbz2-dev libgpgme-dev libssl-dev python3-coverage libboost-program-options-dev python3-psutil python3-opengl python3-pygraphviz python3-pydot qt5-qmake sbcl libapr1-dev libaprutil1-dev libboost-regex-dev liblog4cxx-dev python3-matplotlib libpyside2-dev libshiboken2-dev pyqt5-dev python3-pyqt5 python3-pyqt5.qtsvg python3-pyside2.qtsvg python3-sip-dev shiboken2 lm-sensors graphviz python3-paramiko python3-pycryptodome python3-gnupg python3-defusedxml python3-pyqt5.qtopengl libcurl4-openssl-dev libpoco-dev libogre-1.9-dev libassimp-dev libogre-1.9.0v5 libyaml-cpp-dev libgl1-mesa-dev libglu1-mesa-dev libqt5opengl5 libqt5opengl5-dev libopencv-dev python3-opencv python3-pykdl tango-icon-theme liborocos-kdl-dev libtinyxml-dev libtinyxml2-dev liburdfdom-headers-dev python3-numpy python3-empy libboost-filesystem-dev libboost-thread-dev python3-pygraphviz python3-pygraphviz python3-mock libboost-date-time-dev libboost-system-dev liburdfdom-dev libboost-chrono-dev libboost-dev libqt5core5a libqt5gui5 libqt5widgets5 qtbase5-dev  libconsole-bridge-dev liblz4-dev python3-pyqt5.qtwebkit exfatprogs
@@ -63,7 +63,7 @@ sudo apt install libboost-all-dev uuid-dev python3-nose google-mock libgtest-dev
 
 遇到冲突就一个一个解决吧
 
-### 7.编译（终于，这里会遇到非常非常多的问题！）
+### 编译（终于，这里会遇到非常非常多的问题！）
 
 
 #### 编译
@@ -74,7 +74,7 @@ sudo apt install libboost-all-dev uuid-dev python3-nose google-mock libgtest-dev
 ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release -DPYTHON_EXECUTABLE=/usr/bin/python3
 ```  
 
-这里会编译184个包，如果编译成功第7点后面就不用看了。  
+这里会编译184个包，如果编译成功第6点后面就不用看了。  
 
 
 #### 错误解决
@@ -194,7 +194,7 @@ from /tmp/makepkg/ros-noetic-tf/src/geometry-1.13.2/tf/src/transform_broadcaster
 解决方法
 >删除conda里面包含boost的包即可，注意刷新一下conda环境
 
-### 8.source环境变量就可以用了
+### source环境变量就可以用了
 
 ```bash
 source ~/ros_catkin_ws/install_isolated/setup.bash
