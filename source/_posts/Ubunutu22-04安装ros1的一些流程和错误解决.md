@@ -12,7 +12,7 @@ headimg: '/img/rs.png'
 
 <!-- more -->
 
-<span style="font-size: x-large;">`Ubunutu22.04安装ros1（arm版本）</span>
+<span style="font-size: x-large;">Ubunutu22.04安装ros1（arm版本）</span>
 
 # ubuntu22.04如何安装ros1  
 
