@@ -65,9 +65,21 @@ sudo apt install libboost-all-dev uuid-dev python3-nose google-mock libgtest-dev
 
 ### 7.编译（终于，这里会遇到非常非常多的问题！）
 
+
+#### 编译
+
+编译命令：
+
 ```bash
 ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release -DPYTHON_EXECUTABLE=/usr/bin/python3
-```
+```  
+
+这里会编译184个包，如果编译成功第7点后面就不用看了。  
+
+
+#### 错误解决
+
+- catkin问题
 
 ![image](../img/image.png)
 
@@ -189,3 +201,7 @@ source ~/ros_catkin_ws/install_isolated/setup.bash
 ```
 
 可以输入roscore启动master节点测试是否成功（没报红应该就没问题了）
+
+本文就此结束，有需要可以联系
+邮箱：2084896301@qq.com
+微信：wxcf9687
