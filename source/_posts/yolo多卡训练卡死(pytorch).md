@@ -8,15 +8,16 @@ tags:
 headimg: '/img/2cuda.png'
 ---
 
-本人在2024年第一次使用RTX 4090 + TITAN RTX 双卡训练yolo时出现卡死的情况
-（初始化阶段）
-
 *请忽略文章封面配图的带nvlink的多卡，实际情况是无nvlink，有nvlink的多卡该教程不奏效*
 
-经过大量检索找到了解决办法  
-来源：[https://github.com/Megvii-BaseDetection/YOLOX/issues/1289#issuecomment-1409988436](https://github.com/Megvii-BaseDetection/YOLOX/issues/1289#issuecomment-1409988436)  
-
 <!-- more -->
+
+本人在2024年第一次使用RTX 4090 + TITAN RTX 双卡训练yolo时出现卡死的情况
+（初始化阶段） 
+
+经过大量检索找到了解决办法  
+来源：[https://github.com/Megvii-BaseDetection/YOLOX/issues/1289#issuecomment-1409988436](https://github.com/Megvii-BaseDetection/YOLOX/issues/1289#issuecomment-1409988436)   
+
 
 ## 仅允许IP套接字通信
 
