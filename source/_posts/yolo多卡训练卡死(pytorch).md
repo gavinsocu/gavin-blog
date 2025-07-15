@@ -18,11 +18,13 @@ headimg: '/img/2cuda.png'
 经过大量检索找到了解决办法  
 来源：[https://github.com/Megvii-BaseDetection/YOLOX/issues/1289#issuecomment-1409988436](https://github.com/Megvii-BaseDetection/YOLOX/issues/1289#issuecomment-1409988436)
 ### 仅允许IP套接字通信
+训练前在终端输入：
 ```bash
 export NCCL_LL_THRESHOLD=0
 export NCCL_P2P_DISABLE=1
 export NCCL_IB_DISABLE=1
 ```
+也可以写入python脚本（使用os，问ai）
 <NCCL_P2P_DISABLE> 变量禁用点对点 （P2P） 传输，该传输使用 NVLink 或 PCI 在 GPU 之间使用 CUDA 直接访问。  
 <NCCL_IB_DISABLE> 变量禁用 NCCL 要使用的 IB/RoCE 传输。相反，NCCL 将回退到使用 IP 套接字。  
 
