@@ -25,8 +25,8 @@ export NCCL_P2P_DISABLE=1
 export NCCL_IB_DISABLE=1
 ```
 也可以写入python脚本（使用os，问ai）
-<NCCL_P2P_DISABLE> 变量禁用点对点 （P2P） 传输，该传输使用 NVLink 或 PCI 在 GPU 之间使用 CUDA 直接访问。  
-<NCCL_IB_DISABLE> 变量禁用 NCCL 要使用的 IB/RoCE 传输。相反，NCCL 将回退到使用 IP 套接字。  
+**NCCL_P2P_DISABLE** 变量禁用点对点 （P2P） 传输，该传输使用 NVLink 或 PCI 在 GPU 之间使用 CUDA 直接访问。  
+**NCCL_IB_DISABLE** 变量禁用 NCCL 要使用的 IB/RoCE 传输。相反，NCCL 将回退到使用 IP 套接字。  
 
 **解释**
 对于分布式训练，子进程始终被初始化[dist.init_process_group](https://github.com/Megvii-BaseDetection/YOLOX/blob/f5331eaac5c03f73f59274522fe0507a030c5386/yolox/core/launch.py#L186-L190)由TCP 协议控制
