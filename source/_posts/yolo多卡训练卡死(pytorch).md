@@ -41,5 +41,5 @@ NCCL_LL_THRESHOLD 通常设置为零。
 
 -->end
 
->如果这帮助了你，可以对提出该解决方法的作者star or fllow [https://github.com/ZXYFrank](https://github.com/ZXYFrank)  
-If this helps you, you can star or fllow the author who proposed the solution
+>如果这帮助了你，可以对提出该解决方法的作者star or follow [https://github.com/ZXYFrank](https://github.com/ZXYFrank)  
+If this helps you, you can star or follow the author who proposed the solution
