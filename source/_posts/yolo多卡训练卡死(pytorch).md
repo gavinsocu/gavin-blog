@@ -17,7 +17,7 @@ headimg: '/img/2cuda.png'
 
 经过大量检索找到了解决办法  
 来源：[https://github.com/Megvii-BaseDetection/YOLOX/issues/1289#issuecomment-1409988436](https://github.com/Megvii-BaseDetection/YOLOX/issues/1289#issuecomment-1409988436)
-###仅允许IP套接字通信
+### 仅允许IP套接字通信
 ```bash
 export NCCL_LL_THRESHOLD=0
 export NCCL_P2P_DISABLE=1
