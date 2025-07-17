@@ -498,11 +498,11 @@ sidebar:
       jinrishici: true # Poetry Today. You can set a string, and it will be displayed when loading fails.
       social:
         - icon: fa-solid fa-rss
-          url: /atom.xml
+          url: /
         - icon: fa-solid fa-envelope
-          url: mailto:me@xxx.com
+          url: mailto:2084896301@qq.com
         - icon: fab fa-github
-          url: https://github.com/volantis-x/
+          url: https://github.com/gavinsocu/
         - icon: fa-solid fa-headphones-alt
           url: /
     # ---------------------------------------
