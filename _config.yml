@@ -110,11 +110,11 @@ import:
     - <meta name="msapplication-TileColor" content="#ffffff">
     - <meta name="msapplication-config" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/browserconfig.xml">
     - <meta name="theme-color" content="#ffffff">
-    - <meta name="keywords" content="Gavinccc, gavinccc, gavinsocu, gavin, cuso4, 博客">
+    - <meta name="keywords" content="Gavinccc's Blog, gavinccc, gavinsocu, gavin, cuso4, 博客">
     - <meta property="og:type" content="website" />
     - <meta property="og:title" content="Gavinccc's Blog">
     - <meta property="og:description" content="陈广文的博客">
-    - <meta property="og:image" content="/img/wctitle.png">
+    - <meta property="og:image" content="https://blog.gavinccc.com/img/wctitle.png">
     - <meta property="og:url" content="blog.gavinccc.com/">
     - <title>Gavinccc's Blog</title>
     - <meta name="author" content="gavinccc">
