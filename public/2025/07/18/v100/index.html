@@ -26,7 +26,12 @@
       <meta name="msapplication-config" content="https://unpkg.com/volantis-static@0.0.1649552113628/media/org.volantis/blog/favicon/browserconfig.xml">
       <meta name="theme-color" content="#ffffff">
       <meta name="keywords" content="Gavinccc, gavinccc, gavinsocu, gavin, cuso4, 博客">
-      <title>Gavinccc</title>
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Gavinccc's Blog">
+      <meta property="og:description" content="陈广文的博客">
+      <meta property="og:image" content="/img/wctitle.png">
+      <meta property="og:url" content="blog.gavinccc.com/">
+      <title>Gavinccc's Blog</title>
       <meta name="author" content="gavinccc">
       <link rel="apple-touch-icon" sizes="180x180" href="/img/tx.png">
       <link rel="icon" type="image/png" sizes="32x32" href="/img/tx.png">
@@ -67,7 +72,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2025-07-17T18:00:43.000Z">
-<meta property="article:modified_time" content="2025-07-18T03:55:13.681Z">
+<meta property="article:modified_time" content="2025-07-18T04:24:02.642Z">
 <meta property="article:author" content="gavinccc">
 <meta property="article:tag" content="nvidia">
 <meta property="article:tag" content="显卡">
@@ -1891,7 +1896,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1752810974911),
+    lastupdate: new Date(1752814412788),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate","webinfo"],
       for_post: ["toc"],
@@ -2935,47 +2940,47 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>V100的HBM2显存是和核心封装在一起的，带宽放在今天依然前列</p>
 <p>在跑ai方面，没得说，但是游戏的话肯定还是geforce系列更加勇猛，仅玩游戏的话，也不是没有性价比，只是不是那么推荐</p>
 <h3 id="V100的接口"><a href="#V100的接口" class="headerlink" title="V100的接口"></a><strong>V100的接口</strong></h3><p>在接口方面，大船靠岸的tesla v100基本都是服务器主板专用的sxm2接口版本的v100显卡，和我们消费级主机使用的主板的PCIE接口有很大不同（请看下图），所以还需要使用sxm2转pcie的转接板来正常使用</p>
-<div class="tabs" id="tab-tab-id"><ul class="nav-tabs"><li class="tab active"><a class="#tab-id-1">SXM2接口</a></li><li class="tab"><a class="#tab-id-2">PCIE接口</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-id-1"><img src="/img/sxm2.jpeg" class="lazyload" data-srcset="/img/sxm2.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  height="600" /></div><div class="tab-pane" id="tab-id-2"><p><img src="/../img/pcie.jpg" class="lazyload" data-srcset="/../img/pcie.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="iamge"></p></div></div></div>  
+<div class="tabs" id="tab-tab-id"><ul class="nav-tabs"><li class="tab active"><a class="#tab-id-1">SXM2接口</a></li><li class="tab"><a class="#tab-id-2">PCIE接口</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-id-1"><img src="/img/sxm2.jpeg" class="lazyload" data-srcset="/img/sxm2.jpeg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="   /></div><div class="tab-pane" id="tab-id-2"><p><img src="/../img/pcie.jpg" class="lazyload" data-srcset="/../img/pcie.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="iamge"></p></div></div></div>  
 
 <h2 id="V100卖家和sxm2转pcie转接板选择"><a href="#V100卖家和sxm2转pcie转接板选择" class="headerlink" title="V100卖家和sxm2转pcie转接板选择"></a><strong>V100卖家和sxm2转pcie转接板选择</strong></h2><h3 id="V100卖家选择"><a href="#V100卖家选择" class="headerlink" title="V100卖家选择"></a><strong>V100卖家选择</strong></h3><p>一开始师兄推荐了<strong>南京海雀</strong>，他和我说全网最低价，我一看<strong>640</strong><br>我不信，果然，我自己淘宝一搜，<strong>广州壹玖580</strong>，<strong>上海瑞兴568还包邮</strong><br>师兄果然太过信任他的b站推荐了（这个南京海雀说他全网最低价在B站上面）<br>还好我搜了一下，最后选择了广州壹玖，主要是近，我想快点体验到<br>大家要是购买直接一波<strong>上海瑞兴</strong>，当时我搜的时候是全网最低价了  </p>
 <h3 id="sxm2转pcie转接板选择"><a href="#sxm2转pcie转接板选择" class="headerlink" title="sxm2转pcie转接板选择"></a><strong>sxm2转pcie转接板选择</strong></h3><p>其实市面上有很多中方案，b站上有很多大哥做了教学，甚至pcb开源的都有</p>
 <p>孰优孰劣倒也不好说，我是外接显卡坞的，理论上来说用最丐的就行（因为通道肯定跑不满）  </p>
 <p>当时我主要在杀生丸和胡桃厨两家选择（如下图）</p>
-<div class="tabs" id="tab-tab-id"><ul class="nav-tabs"><li class="tab active"><a class="#tab-id-1">杀生丸</a></li><li class="tab"><a class="#tab-id-2">胡桃厨</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-id-1"><img src="/img/ssw.jpg" class="lazyload" data-srcset="/img/ssw.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  height="600" /></div><div class="tab-pane" id="tab-id-2"><img src="/img/htc.jpg" class="lazyload" data-srcset="/img/htc.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  height="600" /></div></div></div>  
+<div class="tabs" id="tab-tab-id"><ul class="nav-tabs"><li class="tab active"><a class="#tab-id-1">杀生丸</a></li><li class="tab"><a class="#tab-id-2">胡桃厨</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-id-1"><img src="/img/ssw.jpg" class="lazyload" data-srcset="/img/ssw.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" height="500"  /></div><div class="tab-pane" id="tab-id-2"><img src="/img/htc.jpg" class="lazyload" data-srcset="/img/htc.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" height="500"  /></div></div></div>  
 
 <p>这两个转接板别对应了两个散热方案，一个是涡轮散热，一个是4090散热器散热</p>
 <p>由于涡轮实在是太吵了，而且htc支持开发票，所以果断选择了htc的4090散热器版本的转接板（md它第二天就降价100，我想拿刀捅他）</p>
 <h2 id="显卡扩展坞"><a href="#显卡扩展坞" class="headerlink" title="显卡扩展坞"></a><strong>显卡扩展坞</strong></h2><p>选择了天钡的AG02<br>支持usb4和oculink双接口<br>自带800w电源<br>可pd反向供电  </p>
-<img src="/img/ag02.jpg" class="lazyload" data-srcset="/img/ag02.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  height="500" />
+<img src="/img/ag02.jpg" class="lazyload" data-srcset="/img/ag02.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="   />
 
 <h2 id="散热器选择拼装以及魔改"><a href="#散热器选择拼装以及魔改" class="headerlink" title="散热器选择拼装以及魔改"></a><strong>散热器选择拼装以及魔改</strong></h2><h3 id="散热器选择"><a href="#散热器选择" class="headerlink" title="散热器选择"></a><strong>散热器选择</strong></h3><p>这就不必多言了，因为转接板对应了同德的4090散热器，所以直接买了同德的<br>买了无灯版本，有点亏，不是那么帅<br>还是带pcb的（无核心显存），需要的联系我  </p>
-<div class="tabs" id="tab-tab-id"><ul class="nav-tabs"><li class="tab active"><a class="#tab-id-1">同德散热器</a></li><li class="tab"><a class="#tab-id-2">4090pcb</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-id-1"><img src="/img/tde.jpg" class="lazyload" data-srcset="/img/tde.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  height="400" /></div><div class="tab-pane" id="tab-id-2"><img src="/img/pcb.jpg" class="lazyload" data-srcset="/img/pcb.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  height="400" /></div></div></div>  
+<div class="tabs" id="tab-tab-id"><ul class="nav-tabs"><li class="tab active"><a class="#tab-id-1">同德散热器</a></li><li class="tab"><a class="#tab-id-2">4090pcb</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-id-1"><img src="/img/tde.jpg" class="lazyload" data-srcset="/img/tde.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="   /></div><div class="tab-pane" id="tab-id-2"><img src="/img/pcb.jpg" class="lazyload" data-srcset="/img/pcb.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="   /></div></div></div>  
 
 <h3 id="拼装"><a href="#拼装" class="headerlink" title="拼装"></a><strong>拼装</strong></h3><p>全过程最艰难！没有之一！！！</p>
 <p>主要是我当时买的时候没有做好充分的调研，谁知道显卡装上转接板之后和散热器如此不贴合呢，而且核心和均衡热板之间甚至有1.5mm的空隙！，难受阿！</p>
-<img src="/img/koxu.png" class="lazyload" data-srcset="/img/koxu.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  height="400" />
+<img src="/img/koxu.png" class="lazyload" data-srcset="/img/koxu.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="   />
 
 <p>可以看到我框起来的部分，被两个螺柱顶起来，这就是空隙来源  </p>
 <p>为解决此问题，我用了三种方法，看我大显神通  </p>
 <h4 id="前置准备"><a href="#前置准备" class="headerlink" title="前置准备"></a><strong>前置准备</strong></h4><p>其实在解决空隙问题之前，还得解决v100显卡挡板问题，不然完全无法与散热器拼装，我没有看其他人的拼装视频，是我自己发现的这个问题<br>也是我自己找到的解决方法 </p>
-<img src="/img/danban.png" class="lazyload" data-srcset="/img/danban.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  height="400" />
+<img src="/img/danban.png" class="lazyload" data-srcset="/img/danban.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="   />
 
 <p>可以看到我框起来的部分，这个挡板是用来固定核心与pcb的，但是挡住了我散热器连接，但是拆掉的话我又无法很好的与转接板固定<br>所以我的方法是：<strong>挪挡板到转接板背部，与v100显卡用螺丝拧紧</strong>  </p>
-<img src="/img/beibu.jpg" class="lazyload" data-srcset="/img/beibu.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  height="500" />
+<img src="/img/beibu.jpg" class="lazyload" data-srcset="/img/beibu.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="   />
 
 <p>我真聪明，哈哈哈哈，其实要是我有足够品类的螺丝，足够长的，我都不用这么费劲，主要是就啥都没有，只能用显卡自带的和商家送的几个螺母  </p>
 <h4 id="相变片填充空隙"><a href="#相变片填充空隙" class="headerlink" title="相变片填充空隙"></a><strong>相变片填充空隙</strong></h4><p>其实有了空隙之后我就挺崩溃的，实在难受，感觉白买了，毕竟这么多空隙相当于无散热  </p>
 <p>为了填充这个空隙，我跑去实验室把以前的固态残留的相变片和硅脂全部拿了过来，不要命的涂和贴  </p>
 <p>由于我当时贴好之后没有拍照，只有拆开后的一点视频，下面是拆开后的样子  </p>
-<img src="/img/xbp.png" class="lazyload" data-srcset="/img/xbp.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  height="400" />
+<img src="/img/xbp.png" class="lazyload" data-srcset="/img/xbp.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="   />
 
 <p>不仅有空隙未填充完毕，也十分的厚实，导热效率非常差劲  </p>
 <p>但是我仍然用此使用了一段时间，打过游戏，问题不大  </p>
 <p>烤鸡80多度，具体多少，实在是忘记了  </p>
 <p>但是我对此是不满的，主要是丑陋……  </p>
-<h4 id="硅脂片填充空隙"><a href="#硅脂片填充空隙" class="headerlink" title="硅脂片填充空隙"></a><strong>硅脂片填充空隙</strong></h4><p>难受，后面的几乎都没拍什么照片  </p>
+<h4 id="硅胶片填充空隙"><a href="#硅胶片填充空隙" class="headerlink" title="硅胶片填充空隙"></a><strong>硅胶片填充空隙</strong></h4><p>难受，后面的几乎都没拍什么照片  </p>
 <p>因为前面实在是太丑了，所以我去淘宝买了个硅脂片（2mm厚度……  </p>
-<img src="/img/lxz.jpg" class="lazyload" data-srcset="/img/lxz.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  height="600" />  
+<img src="/img/lxz.jpg" class="lazyload" data-srcset="/img/lxz.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" height="500"  />  
 
 <p>额，没错直接贴了上去，但是电感由于在和均衡热板接触面积的外面，所以电感还是无法散热  </p>
 <p>这套方案怎么说呢，几乎没有进步，烤鸡82度……</p>
@@ -2987,22 +2992,22 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>这一套下来果然管用，直接就把烤鸡温度干到67度，电感mos管也成功散热，芜湖起飞~  </p>
 <p>同时我用铜柱加高，使得背板平整（虽然厚度增厚了），功德圆满矣~  </p>
-<img src="/img/shangm.png" class="lazyload" data-srcset="/img/shangm.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  height="500" />
+<img src="/img/shangm.png" class="lazyload" data-srcset="/img/shangm.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="   />
 
 
 <h2 id="V100图形驱动（WDDM模式）"><a href="#V100图形驱动（WDDM模式）" class="headerlink" title="V100图形驱动（WDDM模式）"></a><strong>V100图形驱动（WDDM模式）</strong></h2><h3 id="驱动安装"><a href="#驱动安装" class="headerlink" title="驱动安装"></a><strong>驱动安装</strong></h3><p>直接去官网下载驱动即可，下载对应版本对应硬件的，懂自懂</p>
 <p>如果你也win11，按我这样子就行  </p>
-<img src="/img/qudo.png" class="lazyload" data-srcset="/img/qudo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  height="500" /> 
+<img src="/img/qudo.png" class="lazyload" data-srcset="/img/qudo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="   /> 
 
 <p>点击查看然后下载下来，随后运行安装程序，一路点下一步即可，遇到报错就点是或者跳过</p>
 <p>肯定没问题的  </p>
 <p>安装完之后打开cmd运行nvidia-smi就可以看到以下：</p>
-<img src="/img/tcc.png" class="lazyload" data-srcset="/img/tcc.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  height="500" />  
+<img src="/img/tcc.png" class="lazyload" data-srcset="/img/tcc.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="   />  
 
 <p>我们可以发现，该卡运行在了TCC模式，这个是只能用来跑计算的模式，无法进行图形渲染，也就是无法游戏和生产力工作  </p>
 <p>这个时候我们要改注册表  </p>
 <h3 id="改注册表使TCC模式改为WDDM模式"><a href="#改注册表使TCC模式改为WDDM模式" class="headerlink" title="改注册表使TCC模式改为WDDM模式"></a><strong>改注册表使TCC模式改为WDDM模式</strong></h3><p>首先我们要找到v100设置在注册表的位置，我们打开设备管理器，右键v100驱动，在属性位置点击驱动关键字，可以看到该值<br><em>{4d36e968-e325-11ce-bfc1-08002be10318}?</em><br>除了问号应该都是一样的，同时记住亮机卡的关键字  </p>
-<img src="/img/buzhoutu.png" class="lazyload" data-srcset="/img/buzhoutu.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  height="600" />  
+<img src="/img/buzhoutu.png" class="lazyload" data-srcset="/img/buzhoutu.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="   />  
 
 <p>图中的amd 780 m是我的亮机卡（其实是核显） </p>
 <p><strong>在v100这个注册表中：</strong> </p>
@@ -3013,31 +3018,31 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <blockquote>
 <p>新建32位值 <strong>EnableMsHybrid</strong> 为 2  </p>
 </blockquote>
-<img src="/img/dword.png" class="lazyload" data-srcset="/img/dword.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  height="500" />  
+<img src="/img/dword.png" class="lazyload" data-srcset="/img/dword.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="   />  
 
 <p>随后在设备管理器点击禁用v100驱动 </p>
-<img src="/img/jinyonqudo.png" class="lazyload" data-srcset="/img/jinyonqudo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  height="500" />  
+<img src="/img/jinyonqudo.png" class="lazyload" data-srcset="/img/jinyonqudo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="   />  
 
-<p>然后再打开<br><img src="/img/qiyon.png" class="lazyload" data-srcset="/img/qiyon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  height="500" />  </p>
-<p>随后在cmd运行nvidia-smi，看到模式改为了wddm就成功了<br><img src="/img/wddm.png" class="lazyload" data-srcset="/img/wddm.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  height="500" />  </p>
-<p>也可以用任务管理器或者gpu-z查看，只有有了图形驱动才可以在任务管理器查看到<br><img src="/img/gpuz.png" class="lazyload" data-srcset="/img/gpuz.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  height="500" /> </p>
+<p>然后再打开<br><img src="/img/qiyon.png" class="lazyload" data-srcset="/img/qiyon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="   />  </p>
+<p>随后在cmd运行nvidia-smi，看到模式改为了wddm就成功了<br><img src="/img/wddm.png" class="lazyload" data-srcset="/img/wddm.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="   />  </p>
+<p>也可以用任务管理器或者gpu-z查看，只有有了图形驱动才可以在任务管理器查看到<br><img src="/img/gpuz.png" class="lazyload" data-srcset="/img/gpuz.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="   /> </p>
 <p>据说会有开机之后掉驱动的问题，需要在设备管理器再次启动，额，我没遇到过这个情况  </p>
 <h2 id="usb4与oculink"><a href="#usb4与oculink" class="headerlink" title="usb4与oculink"></a>usb4与oculink</h2><p>一开始我是直接使用usb4的但是惊恐的发现带宽只有PCIE x2 ！！<br>带宽的上限决定许多东西无法正常运行，如游戏帧数始终有瓶颈，不论是最高画质还是最低画质，帧率几乎差不多，这根本不合理  </p>
 <p>简单算一下，<strong>pcie 3.0 x4</strong> 大约是<strong>32gbps</strong>，满血usb4为<strong>40gbps</strong>，正常来讲是够的，但是其中<strong>20gbps</strong>左右被分去了视频输出信号，导致数据带宽只有<strong>20gbps</strong>左右，仅能跑满<strong>pcie 3.0 x2</strong><br>what a pity！</p>
-<p>受不了了，买一个m2转oculink延长线<br><img src="/img/oculink.jpg" class="lazyload" data-srcset="/img/oculink.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  height="500" /> </p>
+<p>受不了了，买一个m2转oculink延长线<br><img src="/img/oculink.jpg" class="lazyload" data-srcset="/img/oculink.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="   /> </p>
 <p>把主机硬盘位用来装这个，启动！！</p>
-<img src="/img/ycx.png" class="lazyload" data-srcset="/img/ycx.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  height="500" /> 
+<img src="/img/ycx.png" class="lazyload" data-srcset="/img/ycx.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="   /> 
 
-<p>成功了，pcie带宽成功来到x4<br><img src="/img/pcie4.png" class="lazyload" data-srcset="/img/pcie4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  height="500" /> </p>
+<p>成功了，pcie带宽成功来到x4<br><img src="/img/pcie4.png" class="lazyload" data-srcset="/img/pcie4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="   /> </p>
 <p>但是这样子有点丑，延长线卡在那里不适合成为这个主机固定接口，扩大主机面积和空间<br>我这样子的强迫症简直难受<br>于是呼叫椰蓉，开始搞机……</p>
 <p>用水口钳在侧边入风口开了一个口，直接用螺丝固定在了侧边，perfect！！！</p>
-<img src="/img/ocul.jpg" class="lazyload" data-srcset="/img/ocul.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  height="500" /> 
+<img src="/img/ocul.jpg" class="lazyload" data-srcset="/img/ocul.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="   /> 
 
 <h2 id="实际测试"><a href="#实际测试" class="headerlink" title="实际测试"></a><strong>实际测试</strong></h2><p>经过我实际的部分测试，一些数据如下：</p>
 <blockquote>
 <p>cs2平均帧150<br>无畏契约188帧<br>三角洲120帧<br>qwen3 14b 38token&#x2F;s<br>烤鸡温度67度温度曲线平整不降频<br>黑神话悟空影视级画质65帧<br>地平线最高画质70帧（有误差，不知为何）</p>
 </blockquote>
-<img src="/img/hsh.jpg" class="lazyload" data-srcset="/img/hsh.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="  height="600" /> 
+<img src="/img/hsh.jpg" class="lazyload" data-srcset="/img/hsh.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="   /> 
   </div>
   
   
@@ -3086,7 +3091,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-07-18T11:55:13+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-07-18T12:24:02+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2025年7月18日</p>
@@ -3233,7 +3238,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%83%B3%E6%B3%95%E6%9D%A5%E6%BA%90"><span class="toc-number">1.1.</span> <span class="toc-text">想法来源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E5%A5%91%E6%9C%BA"><span class="toc-number">1.2.</span> <span class="toc-text">实现契机</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v100%E7%9A%84%E5%8F%82%E6%95%B0"><span class="toc-number">2.</span> <span class="toc-text">v100的参数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#V100%E5%92%8C4060TI%E7%9A%84%E5%AF%B9%E6%AF%94"><span class="toc-number">2.1.</span> <span class="toc-text">V100和4060TI的对比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#V100%E7%9A%84%E6%8E%A5%E5%8F%A3"><span class="toc-number">2.2.</span> <span class="toc-text">V100的接口</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#V100%E5%8D%96%E5%AE%B6%E5%92%8Csxm2%E8%BD%ACpcie%E8%BD%AC%E6%8E%A5%E6%9D%BF%E9%80%89%E6%8B%A9"><span class="toc-number">3.</span> <span class="toc-text">V100卖家和sxm2转pcie转接板选择</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#V100%E5%8D%96%E5%AE%B6%E9%80%89%E6%8B%A9"><span class="toc-number">3.1.</span> <span class="toc-text">V100卖家选择</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sxm2%E8%BD%ACpcie%E8%BD%AC%E6%8E%A5%E6%9D%BF%E9%80%89%E6%8B%A9"><span class="toc-number">3.2.</span> <span class="toc-text">sxm2转pcie转接板选择</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%98%BE%E5%8D%A1%E6%89%A9%E5%B1%95%E5%9D%9E"><span class="toc-number">4.</span> <span class="toc-text">显卡扩展坞</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%A3%E7%83%AD%E5%99%A8%E9%80%89%E6%8B%A9%E6%8B%BC%E8%A3%85%E4%BB%A5%E5%8F%8A%E9%AD%94%E6%94%B9"><span class="toc-number">5.</span> <span class="toc-text">散热器选择拼装以及魔改</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%A3%E7%83%AD%E5%99%A8%E9%80%89%E6%8B%A9"><span class="toc-number">5.1.</span> <span class="toc-text">散热器选择</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%BC%E8%A3%85"><span class="toc-number">5.2.</span> <span class="toc-text">拼装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%89%8D%E7%BD%AE%E5%87%86%E5%A4%87"><span class="toc-number">5.2.1.</span> <span class="toc-text">前置准备</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%B8%E5%8F%98%E7%89%87%E5%A1%AB%E5%85%85%E7%A9%BA%E9%9A%99"><span class="toc-number">5.2.2.</span> <span class="toc-text">相变片填充空隙</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A1%85%E8%84%82%E7%89%87%E5%A1%AB%E5%85%85%E7%A9%BA%E9%9A%99"><span class="toc-number">5.2.3.</span> <span class="toc-text">硅脂片填充空隙</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B4%AB%E9%93%9C%E7%89%87%E5%A1%AB%E5%85%85%E7%A9%BA%E9%9A%99"><span class="toc-number">5.2.4.</span> <span class="toc-text">紫铜片填充空隙</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#V100%E5%9B%BE%E5%BD%A2%E9%A9%B1%E5%8A%A8%EF%BC%88WDDM%E6%A8%A1%E5%BC%8F%EF%BC%89"><span class="toc-number">6.</span> <span class="toc-text">V100图形驱动（WDDM模式）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A9%B1%E5%8A%A8%E5%AE%89%E8%A3%85"><span class="toc-number">6.1.</span> <span class="toc-text">驱动安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%B9%E6%B3%A8%E5%86%8C%E8%A1%A8%E4%BD%BFTCC%E6%A8%A1%E5%BC%8F%E6%94%B9%E4%B8%BAWDDM%E6%A8%A1%E5%BC%8F"><span class="toc-number">6.2.</span> <span class="toc-text">改注册表使TCC模式改为WDDM模式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#usb4%E4%B8%8Eoculink"><span class="toc-number">7.</span> <span class="toc-text">usb4与oculink</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%99%85%E6%B5%8B%E8%AF%95"><span class="toc-number">8.</span> <span class="toc-text">实际测试</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%83%B3%E6%B3%95%E6%9D%A5%E6%BA%90"><span class="toc-number">1.1.</span> <span class="toc-text">想法来源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E5%A5%91%E6%9C%BA"><span class="toc-number">1.2.</span> <span class="toc-text">实现契机</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v100%E7%9A%84%E5%8F%82%E6%95%B0"><span class="toc-number">2.</span> <span class="toc-text">v100的参数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#V100%E5%92%8C4060TI%E7%9A%84%E5%AF%B9%E6%AF%94"><span class="toc-number">2.1.</span> <span class="toc-text">V100和4060TI的对比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#V100%E7%9A%84%E6%8E%A5%E5%8F%A3"><span class="toc-number">2.2.</span> <span class="toc-text">V100的接口</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#V100%E5%8D%96%E5%AE%B6%E5%92%8Csxm2%E8%BD%ACpcie%E8%BD%AC%E6%8E%A5%E6%9D%BF%E9%80%89%E6%8B%A9"><span class="toc-number">3.</span> <span class="toc-text">V100卖家和sxm2转pcie转接板选择</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#V100%E5%8D%96%E5%AE%B6%E9%80%89%E6%8B%A9"><span class="toc-number">3.1.</span> <span class="toc-text">V100卖家选择</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sxm2%E8%BD%ACpcie%E8%BD%AC%E6%8E%A5%E6%9D%BF%E9%80%89%E6%8B%A9"><span class="toc-number">3.2.</span> <span class="toc-text">sxm2转pcie转接板选择</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%98%BE%E5%8D%A1%E6%89%A9%E5%B1%95%E5%9D%9E"><span class="toc-number">4.</span> <span class="toc-text">显卡扩展坞</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%A3%E7%83%AD%E5%99%A8%E9%80%89%E6%8B%A9%E6%8B%BC%E8%A3%85%E4%BB%A5%E5%8F%8A%E9%AD%94%E6%94%B9"><span class="toc-number">5.</span> <span class="toc-text">散热器选择拼装以及魔改</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%A3%E7%83%AD%E5%99%A8%E9%80%89%E6%8B%A9"><span class="toc-number">5.1.</span> <span class="toc-text">散热器选择</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%BC%E8%A3%85"><span class="toc-number">5.2.</span> <span class="toc-text">拼装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%89%8D%E7%BD%AE%E5%87%86%E5%A4%87"><span class="toc-number">5.2.1.</span> <span class="toc-text">前置准备</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%B8%E5%8F%98%E7%89%87%E5%A1%AB%E5%85%85%E7%A9%BA%E9%9A%99"><span class="toc-number">5.2.2.</span> <span class="toc-text">相变片填充空隙</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A1%85%E8%83%B6%E7%89%87%E5%A1%AB%E5%85%85%E7%A9%BA%E9%9A%99"><span class="toc-number">5.2.3.</span> <span class="toc-text">硅胶片填充空隙</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B4%AB%E9%93%9C%E7%89%87%E5%A1%AB%E5%85%85%E7%A9%BA%E9%9A%99"><span class="toc-number">5.2.4.</span> <span class="toc-text">紫铜片填充空隙</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#V100%E5%9B%BE%E5%BD%A2%E9%A9%B1%E5%8A%A8%EF%BC%88WDDM%E6%A8%A1%E5%BC%8F%EF%BC%89"><span class="toc-number">6.</span> <span class="toc-text">V100图形驱动（WDDM模式）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A9%B1%E5%8A%A8%E5%AE%89%E8%A3%85"><span class="toc-number">6.1.</span> <span class="toc-text">驱动安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%B9%E6%B3%A8%E5%86%8C%E8%A1%A8%E4%BD%BFTCC%E6%A8%A1%E5%BC%8F%E6%94%B9%E4%B8%BAWDDM%E6%A8%A1%E5%BC%8F"><span class="toc-number">6.2.</span> <span class="toc-text">改注册表使TCC模式改为WDDM模式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#usb4%E4%B8%8Eoculink"><span class="toc-number">7.</span> <span class="toc-text">usb4与oculink</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E9%99%85%E6%B5%8B%E8%AF%95"><span class="toc-number">8.</span> <span class="toc-text">实际测试</span></a></li></ol>
     </div>
   </section>
 
@@ -4141,7 +4146,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   <script>
-  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp"];
+  let imgs = ["https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/006.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/012.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/042.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/046.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/004.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/056.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/039.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/052.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/038.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/001.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/002.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/054.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/016.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/035.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/019.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/051.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/025.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/033.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/005.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/003.webp","https://unpkg.com/volantis-static@0.0.1654736714924/media/wallpaper/minimalist/2020/034.webp"];
   let index = 0;
   let IntervalParallax = null;
 
@@ -4368,7 +4373,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"gavinsocu","url":"http://blog.gavinccc.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"gavinccc","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://blog.gavinccc.com/","sameAs":["https://github.com/volantis-x"],"description":"gavin的博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://blog.gavinccc.com/","name":"gavinsocu"}},{"@type":"ListItem","position":3,"item":{"@id":"http://blog.gavinccc.com/2025/07/18/v100/","name":"v100折腾小记"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"gavinsocu","url":"http://blog.gavinccc.com/","keywords":null,"description":"gavin的博客","author":{"@type":"Person","name":"gavinccc","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://blog.gavinccc.com/","description":"gavin的博客"},"publisher":{"@type":"Organization","name":"gavinsocu","url":"http://blog.gavinccc.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://blog.gavinccc.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"v100折腾小记","description":"搞机的确是人生一大趣事（机器的机）","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://blog.gavinccc.com/2025/07/18/v100/"},"author":{"@type":"Person","name":"gavinccc","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://blog.gavinccc.com/"},"publisher":{"@type":"Organization","name":"gavinsocu","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://blog.gavinccc.com/2025/07/18/v100/","wordCount":17,"datePublished":"2025-07-17T18:00:43.000Z","dateModified":"2025-07-18T03:55:13.681Z","keywords":"nvidia,显卡,显卡坞,oculink,usb4","image":{"@type":"ImageObject","url":"/img/realv100.jpg","width":1024,"height":768}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"gavinsocu","url":"http://blog.gavinccc.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"gavinccc","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://blog.gavinccc.com/","sameAs":["https://github.com/volantis-x"],"description":"gavin的博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://blog.gavinccc.com/","name":"gavinsocu"}},{"@type":"ListItem","position":3,"item":{"@id":"http://blog.gavinccc.com/2025/07/18/v100/","name":"v100折腾小记"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"gavinsocu","url":"http://blog.gavinccc.com/","keywords":null,"description":"gavin的博客","author":{"@type":"Person","name":"gavinccc","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://blog.gavinccc.com/","description":"gavin的博客"},"publisher":{"@type":"Organization","name":"gavinsocu","url":"http://blog.gavinccc.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://blog.gavinccc.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"v100折腾小记","description":"搞机的确是人生一大趣事（机器的机）","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://blog.gavinccc.com/2025/07/18/v100/"},"author":{"@type":"Person","name":"gavinccc","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://blog.gavinccc.com/"},"publisher":{"@type":"Organization","name":"gavinsocu","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://blog.gavinccc.com/2025/07/18/v100/","wordCount":17,"datePublished":"2025-07-17T18:00:43.000Z","dateModified":"2025-07-18T04:24:02.642Z","keywords":"nvidia,显卡,显卡坞,oculink,usb4","image":{"@type":"ImageObject","url":"/img/realv100.jpg","width":1024,"height":768}}]</script>
 
 
 
